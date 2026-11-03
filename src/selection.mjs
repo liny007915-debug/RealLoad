@@ -1,0 +1,4 @@
+/** Selection rectangle geometry in screen coordinates. A projected box intersects a screen marquee. */
+export function intersectScreenRect(vertices,marquee){if(!vertices?.length)return false;const xs=vertices.map(v=>v.x),ys=vertices.map(v=>v.y);const ax=Math.min(...xs),ay=Math.min(...ys),bx=Math.max(...xs),by=Math.max(...ys);const x1=Math.min(marquee.x1,marquee.x2),x2=Math.max(marquee.x1,marquee.x2),y1=Math.min(marquee.y1,marquee.y2),y2=Math.max(marquee.y1,marquee.y2);return ax<=x2&&bx>=x1&&ay<=y2&&by>=y1}
+export function cargoCorners(p){const x=p.x/1000,y=p.z/1000,z=p.y/1000,dx=p.L/1000,dy=p.H/1000,dz=p.W/1000;return [[x,y,z],[x+dx,y,z],[x,y+dy,z],[x,y,z+dz],[x+dx,y+dy,z],[x+dx,y,z+dz],[x,y+dy,z+dz],[x+dx,y+dy,z+dz]]}
+export function pickScreenRect(items,project,marquee){return items.filter(p=>intersectScreenRect(cargoCorners(p).map(c=>project(c)),marquee)).map(p=>p.id)}

@@ -1,0 +1,14 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {settleDrag} from '../src/drag-assist.mjs';
+import {validate} from '../src/engine.mjs';
+import {readFileSync} from 'node:fs';
+const box={L:2400,W:1600,H:1800,doorW:1500,doorH:1700,maxWeight:20000};
+const skus=[{id:'A',name:'A',kind:'carton',L:400,W:400,H:400,qty:3,weight:20,rotate:true,stackLimit:1},{id:'B',name:'B',kind:'carton',L:400,W:400,H:400,qty:3,weight:20,rotate:true,stackLimit:1}];
+const p=(id,skuId,x,y)=>({id,skuId,name:skuId,kind:'carton',x,y,z:0,L:400,W:400,H:400,weight:20,heading:0,stackLimit:1,locked:false});
+test('drag to open floor can move directly with numeric precision',()=>{const old=[p('A#1','A',0,0)];const r=settleDrag(old,'A#1',{x:550.25,y:225.5,z:0},box,skus);assert.equal(r.ok,true);assert.deepEqual([r.position.x,r.position.y],[550.25,225.5]);assert.equal(old[0].x,0);assert.equal(validate(r.placements,box,skus).valid,true)});
+test('drag against another carton slides along it instead of going invalid',()=>{const old=[p('A#1','A',0,0),p('B#1','B',500,0)];const r=settleDrag(old,'A#1',{x:600,y:300,z:0},box,skus);assert.equal(r.ok,true);assert.equal(validate(r.placements,box,skus).valid,true);assert.ok(r.position.x>0||r.position.y>0);assert.ok(r.adjusted);assert.deepEqual(old[0],[p('A#1','A',0,0)][0]);});
+test('drag blocked by locked cargo rejects',()=>{const old=[{...p('A#1','A',0,0),locked:true}];const r=settleDrag(old,'A#1',{x:100,y:0,z:0},box,skus);assert.equal(r.ok,false);assert.match(r.reason,/锁定/)});
+test('dragging a selection preserves relative positions',()=>{const old=[p('A#1','A',0,0),p('B#1','B',450,0)];const r=settleDrag(old,'A#1',{x:100,y:250,z:0},box,skus,['A#1','B#1']);assert.equal(r.ok,true);assert.equal(r.placements[1].x-r.placements[0].x,450);assert.equal(validate(r.placements,box,skus).valid,true)});
+test('hidden panels preserve measured container envelope and doorway',()=>{const text=readFileSync(new URL('../src/fallback-render.mjs',import.meta.url),'utf8');assert.match(text,/if\(shellVisible\)/);assert.match(text,/end optional container shell/);const w=readFileSync(new URL('../src/webgl.mjs',import.meta.url),'utf8');assert.match(w,/if\(bodyAlpha<\.04\|\|opts\.dimensions\)\{g\.disable\(g\.DEPTH_TEST\);lines\(edges/);assert.match(text,/Permanent measured envelope and doorway/);assert.match(w,/doorLeft=\(W-box\.doorW\/M\)\/2/)});
+test('full screen has true viewport-filling layout and keyboard escape',()=>{const css=readFileSync(new URL('../src/v22.css',import.meta.url),'utf8');const ui=readFileSync(new URL('../index.html',import.meta.url),'utf8');assert.match(css,/position:fixed;inset:9px/);assert.match(css,/overflow-y:auto/);assert.match(ui,/id="editor-fullscreen"/);assert.match(ui,/id="v112-hide-shell"/);});

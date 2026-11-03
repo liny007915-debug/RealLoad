@@ -1,0 +1,67 @@
+/* RealLoad v1.4 — warmer, quieter spatial workbench. 
+   One primary task: put a correctly sized cargo envelope into a container. */
+:root{
+  --bg:#f4f0e9;--surface:#fffdfa;--panel:#fffaf4;--stage:#eceae3;
+  --ink:#2e342f;--muted:#6f786f;--soft:#90968c;--line:#e7e0d4;
+  --accent:#467663;--accent-weak:#e9f0e8;--dark:#303c33;--focus:#467663;
+  --danger:#a74e3d;--warning:#a56d43;--shadow:0 18px 44px rgba(56,48,34,.11);
+  --material-warm:#bb9169;--material-paper:#f5e8d7;--material-metal:#7b8c8a;
+  --paper:#f9f5ee;--paper-shade:#f3eee5;--subtle-border:#e0d8cc;
+  --focus-glow:#e1eee6;--button-shadow:0 8px 24px rgba(64,58,39,.09);
+  --v13-subtle:#f5f0e7;--v13-line:#e5dace;--v13-ink:#30372e;--v13-green:#477a61;
+  --v14-amber:#c18c5d;--v14-amber-pale:#faf0e3;
+}
+body{background:var(--bg)}
+.topbar{background:var(--surface);border-color:var(--line)}
+.brand-symbol{background:var(--dark);border-radius:12px}
+.rail{background:var(--dark)}
+.rail-item.active,.rail-item:hover{background:#4b574b;color:#fefdfb}
+.rail-item.active::after{background:#d9af7b}
+.library{background:var(--surface)}
+.workspace{background:var(--bg)}
+.workspace-title h1{color:var(--ink);font-weight:720;letter-spacing:-.9px}
+.workspace-intro{color:var(--muted)}
+.workspace-stats{background:var(--surface);border-color:var(--line)}
+.viewport-shell{border:1px solid #ddd7ce;background:#f8f6f1;box-shadow:0 8px 40px rgba(48,46,32,.06);border-radius:16px}
+.stage,.stage-canvases{background:var(--stage)!important}
+.scene-preset-bar{background:rgba(255,253,248,.93);border-color:#e3ddd4;box-shadow:0 8px 25px rgba(69,58,44,.07)}
+.scene-preset-bar .preset-btn.active{background:var(--dark)}
+.scene-quick{background:rgba(255,253,249,.94);border-color:var(--line)}
+.scene-readout{background:rgba(255,253,249,.96);border-color:var(--line);box-shadow:0 9px 32px rgba(55,46,35,.09)}
+.sku-card:hover{background:#faf5ec}.sku-card.selected{background:#eef3eb;box-shadow:inset 3px 0 var(--accent)}
+.free-hero h2{font-size:24px;letter-spacing:-1px}
+.free-hero p{font-size:12px;line-height:1.65;color:var(--muted);max-width:30ch}
+.free-material{min-height:76px;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:none;transition:background-color .16s,border-color .16s}
+.free-material:hover{background:var(--v14-amber-pale);border-color:#d7bb9a;box-shadow:none}
+.free-material:active{cursor:grabbing}
+.free-swatch{border-radius:8px}
+.free-segment{background:var(--paper-shade);border-color:var(--line)}
+.free-studio-controls{border-color:var(--line)}
+.free-quick-actions button,.free-action-bar button,.free-arrangement-grid button,.free-dock-grid button{border-radius:10px;background:var(--surface);border:1px solid var(--line);color:var(--ink);font-weight:570;transition:background-color .14s,border-color .14s}
+.free-quick-actions button:hover,.free-action-bar button:hover,.free-arrangement-grid button:hover,.free-dock-grid button:hover{background:var(--paper);border-color:#b9c9bc}
+.free-docking{margin:5px 0 14px;border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:0}
+.free-docking summary{cursor:pointer;list-style:none;padding:13px 14px;font-size:13px;font-weight:650;color:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:46px}
+.free-docking summary::-webkit-details-marker{display:none}
+.free-docking summary:after{content:'⌄';color:var(--muted)}.free-docking[open] summary:after{content:'⌃'}
+.free-docking summary span{font-size:10px;font-weight:450;color:var(--muted);flex:1;text-align:right}
+.free-dock-grid{padding:0 12px 12px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+.free-dock-grid button{font-size:11px;min-height:39px;padding:8px 5px}
+.free-dock-grid button:hover{background:var(--v14-amber-pale);border-color:#d1ac87}
+.free-dock-grid button:focus-visible,.free-docking summary:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+/* The drag hint is a compact actionable status, not a veil obscuring cargo. */
+.free-drop-hint{inset:auto;left:50%;top:70px;transform:translateX(-50%);width:max-content;max-width:min(82%,500px);min-height:42px;padding:10px 18px;border:1px solid #91b3a1;border-radius:12px;display:flex;align-items:center;justify-content:center;background:rgba(248,254,246,.97);color:#28664d;font-size:13px;line-height:1.5;box-shadow:0 9px 25px rgba(50,61,45,.14);backdrop-filter:blur(6px)}
+.free-drop-hint[data-valid="no"]{background:rgba(255,246,237,.97);border-color:#d8a58d;color:#994e38}
+.move-feedback{position:absolute;top:114px;left:50%;transform:translateX(-50%);z-index:13;pointer-events:none;padding:9px 15px;max-width:min(80%,440px);border-radius:10px;background:rgba(255,248,239,.96);border:1px solid #d6a48e;color:#8c4935;font-size:12px;line-height:1.5;box-shadow:0 5px 22px rgba(83,52,34,.11);text-align:center}
+.move-feedback.hidden{display:none}
+/* In free place, remove duplicate stage controls; sidebar and canvas are sufficient. */
+.layout:has(.rail-item[data-section="free"].active) .scene-quick{display:none}
+.layout:has(.rail-item[data-section="free"].active) .free-stage-panel{display:none}
+.layout:has(.rail-item[data-section="free"].active) .scene-guidance{opacity:.56}
+.locator-panel{border-color:var(--line);background:rgba(255,253,249,.97)}
+.locator-panel .locator-search{background:var(--paper)}
+.v13-material-dialog{background:var(--surface);border-color:var(--line)}
+button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+@media(max-width:670px){.free-drop-hint{top:50px;font-size:11px;padding:7px 10px}.move-feedback{top:88px}.free-docking summary span{display:none}}
+@media(prefers-reduced-motion:reduce){.free-material,.free-quick-actions button,.free-action-bar button,.free-arrangement-grid button,.free-dock-grid button{transition:none!important}}
+
+.free-remaining{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11px;color:var(--muted);white-space:nowrap}.free-remaining button{font-size:11px;font-weight:650;min-height:31px;padding:5px 10px;background:var(--v14-amber-pale);border:1px solid #e0c5a5;border-radius:8px;color:#855b37}.free-remaining button:hover:not(:disabled){background:#f2dfc6}.free-remaining button:focus-visible{outline:3px solid var(--focus);outline-offset:2px}

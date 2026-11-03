@@ -1,0 +1,42 @@
+/* V1.16: content-first onboarding and controllable unloading camera. */
+:root{--v116-r:14px;--v116-ink:#3b3445;--v116-sub:#7b7186;--v116-edge:#e5dce8;--v116-accent:#6c60ad}
+.v116-empty-dock{position:relative!important;inset:auto!important;left:auto!important;top:auto!important;transform:none!important;z-index:1!important;width:100%!important;max-width:none!important;margin:0!important;box-shadow:none!important;border:0!important;border-bottom:1px solid var(--v116-edge)!important;border-radius:0!important;background:linear-gradient(105deg,#fffcf7,#f7f2fc)!important;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:12px 16px!important;text-align:left!important;backdrop-filter:none!important}
+.v116-empty-dock.hidden{display:none!important}
+.v116-empty-dock .empty-kicker{margin:0!important;white-space:nowrap}
+.v116-empty-dock strong{font-size:13px!important;margin:0!important;line-height:1.25!important}
+.v116-empty-dock p{margin:0!important;font-size:11px!important;max-width:35ch;line-height:1.4!important}
+.v116-empty-dock .empty-actions{margin:0!important;display:flex;flex-wrap:wrap;gap:6px}
+.v116-empty-dock button{min-height:36px!important;border-radius:var(--v116-r)!important}
+.v116-first-start{border-bottom:2px solid #b8a1db;box-shadow:0 4px 16px #a490c320}
+.v116-focus-tools{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:8px 12px;background:linear-gradient(102deg,#fffdfb,#f4f0fc);border:1px solid var(--v116-edge);border-width:0 0 1px 0;min-height:44px;color:var(--v116-ink)}
+.v116-focus-tools.hidden{display:none!important}
+.v116-focus-tools button{padding:7px 12px;border:1px solid #d9cde5;background:#fff;border-radius:var(--v116-r);font-size:12px;font-weight:750;color:#615080;min-height:34px;cursor:pointer;box-shadow:0 3px 8px #3c29500a}
+.v116-focus-tools button:hover{background:#eee7f9;box-shadow:0 6px 14px #60518b23;transform:translateY(-1px)}
+.v116-focus-tools button:active{transform:scale(.95)}
+.v116-focus-tools #v116-zoom-in,.v116-focus-tools #v116-zoom-out{font-size:18px;width:38px;min-width:38px;line-height:1}
+.v116-focus-label{font-size:11px;font-weight:750;max-width:240px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-right:auto}
+.v116-focus-help{font-size:10px;color:var(--v116-sub)}
+.v116-order-badge{border-radius:12px!important;min-width:31px!important;min-height:31px!important;font-size:13px!important;box-shadow:0 5px 18px #4c2d6a45!important}
+.v116-order-badge.v116-current{background:linear-gradient(125deg,#e27448,#ba5b4e)!important;outline:3px solid #fff;box-shadow:0 0 0 5px #eea88777,0 9px 19px #58374845!important;z-index:12!important}
+.v116-path-vector{position:absolute;height:0;pointer-events:none;border-top:3px dashed #8f79d2;transform-origin:0 50%;opacity:.95;z-index:3;filter:drop-shadow(0 1px 1px #fff)}
+.v116-path-vector.blocked{border-top-color:#be7d65}
+.v116-path-vector:after{content:'➜';position:absolute;right:-6px;top:-17px;font-size:19px;color:#7c69b6;transform:rotate(0)}
+.v116-path-vector.blocked:after{color:#b47762}
+.v114-step:first-child{background:linear-gradient(135deg,#f3ecff,#fff9f0)!important;border-color:#a18dc9!important}
+.v114-step.selected{outline:2px solid #ad86c4;outline-offset:1px}
+.guide-dialog{border-radius:20px!important}
+@media(max-width:740px){.v116-empty-dock{padding:9px 10px!important;gap:6px}.v116-empty-dock p{display:none}.v116-empty-dock strong{font-size:12px!important}.v116-focus-label{max-width:100%;width:100%;margin:0}.v116-focus-help{display:none}.v116-focus-tools{padding:5px 8px;gap:5px}.v116-focus-tools button{flex:1 1 auto;font-size:11px;padding:5px 7px}.v116-focus-tools #v116-zoom-in,.v116-focus-tools #v116-zoom-out{flex:0 0 36px}}
+@media(prefers-reduced-motion:reduce){.v116-focus-tools button{transition:none!important;animation:none!important}}
+
+/* On small screens, put the selected-item readout below, not ON TOP OF, the 3D cargo. */
+.v116-cargo-detail-dock:empty{display:none}
+@media(max-width:740px){
+ .v116-cargo-detail-dock{flex:0 0 auto;display:flex;gap:8px;align-items:stretch;flex-wrap:wrap;padding:7px 10px;background:#fffdfa;border-bottom:1px solid #e4dfea;min-width:0}
+ .v116-cargo-detail-dock .scene-readout{position:relative!important;inset:auto!important;right:auto!important;bottom:auto!important;min-width:0!important;max-width:none!important;flex:1 1 190px;box-shadow:none!important;padding:7px 9px!important;gap:3px!important;border-radius:12px!important;pointer-events:auto!important}
+ .v116-cargo-detail-dock .scene-readout span,.v116-cargo-detail-dock .scene-readout small{font-size:10px!important;line-height:1.3}
+ .v116-cargo-detail-dock .scene-readout strong{font-size:11px!important;line-height:1.3}
+ .v116-cargo-detail-dock .selection-actions{position:static!important;inset:auto!important;max-width:none!important;flex:1 1 auto;box-shadow:none!important;flex-wrap:wrap;justify-content:flex-start!important;margin:0!important}
+ .v116-cargo-detail-dock .selection-actions button{min-height:32px}
+ .stage .label-layer .cargo-label.selected{display:none!important}
+}
+.v112-fullscreen .v116-cargo-detail-dock{display:none!important}

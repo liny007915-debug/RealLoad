@@ -1,0 +1,30 @@
+{
+  "title": "RealLoad — Quiet Assembly",
+  "description": "Original synthesized minimal electronic product-film background",
+  "originalFor": "RealLoad Studio product film",
+  "externalSamples": [],
+  "generator": "generate_music.py",
+  "seed": 1272026,
+  "bpm": 96,
+  "bars": 24,
+  "seconds": 60.0,
+  "sampleRate": 48000,
+  "channels": 2,
+  "pcmBits": 16,
+  "loopVersion": false,
+  "fadeInSeconds": 1.4,
+  "fadeOutSeconds": 3.2,
+  "peakLinear": 0.707916259765625,
+  "peakDbfs": -3.0003622493859567,
+  "rmsLinear": 0.15132102626086052,
+  "rmsDbfs": -16.402014439587276,
+  "channelRmsDbfs": [
+    -16.40355883076859,
+    -16.400470597410475
+  ],
+  "crestFactorDb": 13.401652190201322,
+  "clippedSamples": 0,
+  "sha256": "727e13d0c56cdb0edb71810139c66c360ae8567406fda800ce69936f5aab40ef",
+  "fileBytes": 11520044,
+  "measurementNote": "RMS is unweighted full-file stereo amplitude, not LUFS or true peak"
+}

@@ -1,0 +1,387 @@
+[
+  {
+    "name": "mixed-template-edit-add-and-json-roundtrip",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "loadedBefore": 18,
+      "loadedAfter": 19,
+      "oldRevisions": [
+        [
+          "BETA-MIXED#1",
+          "carton",
+          450,
+          350,
+          320,
+          12
+        ],
+        [
+          "BETA-MIXED#2",
+          "crate",
+          650,
+          450,
+          550,
+          75
+        ],
+        [
+          "BETA-MIXED#3",
+          "machine",
+          800,
+          550,
+          720,
+          180
+        ]
+      ],
+      "newUnit": {
+        "id": "BETA-MIXED#4",
+        "ordinal": 4,
+        "skuId": "BETA-MIXED",
+        "name": "仅用于后续的新模板",
+        "kind": "irregular",
+        "weight": 42,
+        "stackLimit": 1,
+        "cargoSpec": {
+          "version": 1,
+          "L": 700,
+          "W": 450,
+          "H": 500,
+          "weight": 42,
+          "kind": "irregular",
+          "rotate": false,
+          "allowTilt": false,
+          "stackLimit": 1
+        },
+        "locked": false,
+        "x": 5300,
+        "y": 100,
+        "z": 0,
+        "L": 700,
+        "W": 450,
+        "H": 500,
+        "rotation": 0,
+        "heading": 0,
+        "stackDepth": 1,
+        "groupId": "Beta-混合货单",
+        "orderNo": "SIMULATED-BETA",
+        "batchNo": "",
+        "skuCode": "BETA-MIXED",
+        "unitCode": "PLAN-Beta-混合货单-BETA-MIXED-U-004",
+        "unitCodeSource": "system-planned",
+        "palletNo": "",
+        "destination": "",
+        "priority": "urgent",
+        "deliveryStop": 1
+      },
+      "exportedSchema": 3
+    },
+    "passed": true
+  },
+  {
+    "name": "manifest-and-position-csv-use-physical-records",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "loadedManifestRows": 18,
+      "pendingManifestRows": 1,
+      "positionRows": 18,
+      "oldRevisionMasses": [
+        "12",
+        "75",
+        "180",
+        "32"
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "mixed-spec-container-reflow-and-auto-preserve-every-old-record",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "reflowCount": 18,
+      "automaticCount": 19,
+      "retainedOldIds": [
+        "BETA-BAG#1",
+        "BETA-BOARD#1",
+        "BETA-BUNDLE#1",
+        "BETA-COOLBOX#1",
+        "BETA-CRATE#1",
+        "BETA-DRUM#1",
+        "BETA-IBC#1",
+        "BETA-IRREGULAR#1",
+        "BETA-MACHINE#1",
+        "BETA-MIXED#1",
+        "BETA-MIXED#2",
+        "BETA-MIXED#3",
+        "BETA-PALLET#1",
+        "BETA-PLASTIC_CRATE#1",
+        "BETA-REEL#1",
+        "BETA-ROLL#1",
+        "BETA-ROUND_PACK#1",
+        "BETA-SACK#1"
+      ],
+      "newRecord": "BETA-MIXED#4"
+    },
+    "passed": true
+  },
+  {
+    "name": "sparse-fourth-ordinal-plus-adds-exactly-one-unit-of-selected-sku",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "oldSerial": 4,
+      "newSerial": 1,
+      "newCount": 2,
+      "otherSkuLoaded": 0
+    },
+    "passed": true
+  },
+  {
+    "name": "arbitrary-physical-id-uses-explicit-third-ordinal-and-original-name",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "physicalId": "WAREHOUSE-PHYSICAL-3",
+      "explicitOrdinal": 3,
+      "correctUnitCode": "PLAN-Beta-混合货单-BETA-MIXED-CB-003",
+      "originalPhysicalName": "同SKU第3种实物（合成测试，非厂家规格）",
+      "futureTemplateName": "新模板名称，不能覆盖第3件旧实物",
+      "freeSearchMatches": 1,
+      "locatorSearchMatches": 1
+    },
+    "passed": true
+  },
+  {
+    "name": "locator-results-remain-clickable-with-selected-editor-876",
+    "viewport": {
+      "width": 876,
+      "height": 672
+    },
+    "evidence": {
+      "selectedEditorOpen": true,
+      "unitCode": "PLAN-Beta-混合货单-BETA-MIXED-CB-003",
+      "visibleResults": 1,
+      "rowBox": {
+        "x": 262,
+        "y": 390,
+        "width": 296,
+        "height": 75.875
+      },
+      "resultBox": {
+        "x": 262,
+        "y": 390,
+        "width": 298,
+        "height": 96
+      },
+      "actualPointerSelection": true
+    },
+    "passed": true
+  },
+  {
+    "name": "locator-results-remain-clickable-with-selected-editor-390",
+    "viewport": {
+      "width": 390,
+      "height": 700
+    },
+    "evidence": {
+      "selectedEditorOpen": true,
+      "unitCode": "PLAN-Beta-混合货单-BETA-MIXED-CB-003",
+      "visibleResults": 1,
+      "rowBox": {
+        "x": 60,
+        "y": 315,
+        "width": 300,
+        "height": 75.875
+      },
+      "resultBox": {
+        "x": 60,
+        "y": 315,
+        "width": 302,
+        "height": 238
+      },
+      "actualPointerSelection": true
+    },
+    "passed": true
+  },
+  {
+    "name": "mixed-eighteen-unit-complete-load-and-unload-preview",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "loadCompleted": 18,
+      "unloadCompleted": 18,
+      "previewOnly": true
+    },
+    "passed": true
+  },
+  {
+    "name": "mixed-four-views-shell-and-scene-fullscreen-1440",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "labels": [
+        "货柜三维视图，当前显示 18 件货物",
+        "货柜俯视视图，当前显示 18 件货物",
+        "货柜柜门视图，当前显示 18 件货物",
+        "货柜侧面视图，当前显示 18 件货物"
+      ],
+      "scene": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "images": [
+        {
+          "mode": "hidden",
+          "hash": "f3c5ad82d908ba55acd4ad3cd0a8e83e232e343d7e2673668e1dbfa8192c298e"
+        },
+        {
+          "mode": "ghost",
+          "hash": "2e2621540a50cc9e15391faea4a8c39d0e0100f0d86f83e68cbdea429b1c16ad"
+        },
+        {
+          "mode": "solid",
+          "hash": "5bf0428949459c75f2c8f1d606f97d73ce9096989c613fb689e30cd551690a6b"
+        }
+      ],
+      "opacity": 0.3
+    },
+    "passed": true
+  },
+  {
+    "name": "mixed-four-views-shell-and-scene-fullscreen-390",
+    "viewport": {
+      "width": 390,
+      "height": 700
+    },
+    "evidence": {
+      "labels": [
+        "货柜三维视图，当前显示 18 件货物",
+        "货柜俯视视图，当前显示 18 件货物",
+        "货柜柜门视图，当前显示 18 件货物",
+        "货柜侧面视图，当前显示 18 件货物"
+      ],
+      "scene": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 700
+      },
+      "images": [
+        {
+          "mode": "hidden",
+          "hash": "5d2bbdb93f0bdd2efed2a54756eddc9ff43f83877b5b52d119dc97f5f11a2bc2"
+        },
+        {
+          "mode": "ghost",
+          "hash": "59a1e46db85ecb0b29aa1af7d8e148eb197e21ee4b3b3224f575c73bba6c7110"
+        },
+        {
+          "mode": "solid",
+          "hash": "ccabdd1a8769db91ba83aa041c1d83ffca80cd8deb329443279b37aa8e352246"
+        }
+      ],
+      "opacity": 0.3
+    },
+    "passed": true
+  },
+  {
+    "name": "invalid-json-imports-reject-entire-plan",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": [
+      {
+        "name": "negative-spec",
+        "message": "无法导入：装载数据包含非法坐标或冲突：BETA-MIXED#1: 单件规格尺寸或毛重非法"
+      },
+      {
+        "name": "duplicate-ordinal",
+        "message": "无法导入：装载数据包含非法坐标或冲突：BETA-MIXED#3: 同一 SKU 的第 1 件重复"
+      },
+      {
+        "name": "door-too-wide",
+        "message": "无法导入：箱体参数非法：柜门净宽不能大于箱体内部宽度；请核对尺寸和单位"
+      },
+      {
+        "name": "duplicate-record",
+        "message": "无法导入：装载数据包含非法坐标或冲突：货物编号缺失或重复"
+      },
+      {
+        "name": "numeric-sku-id",
+        "message": "无法导入：货物尺寸、重量、数量、编号或编号规则有误"
+      },
+      {
+        "name": "blank-sku-id",
+        "message": "无法导入：货物尺寸、重量、数量、编号或编号规则有误"
+      },
+      {
+        "name": "excessive-numbering-width",
+        "message": "无法导入：货物尺寸、重量、数量、编号或编号规则有误"
+      },
+      {
+        "name": "unknown-numbering-mode",
+        "message": "无法导入：货物尺寸、重量、数量、编号或编号规则有误"
+      },
+      {
+        "name": "invalid-container-source",
+        "message": "无法导入：箱体名称、来源与核对说明须为文字"
+      },
+      {
+        "name": "invalid-cargo-name",
+        "message": "无法导入：货物尺寸、重量、数量、编号或编号规则有误"
+      }
+    ],
+    "passed": true
+  },
+  {
+    "name": "zero-quantity-plan-and-empty-coordinate-update-retain-physical-units",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "zeroStockRecordRetained": true,
+      "loadedUnits": 18,
+      "emptyCoordinatesPreservePhysicalUnits": true,
+      "project": "空坐标只更新资料与规划设置",
+      "planning": {
+        "doorMode": "smart",
+        "clearance": 10,
+        "policy": "low-lift",
+        "maxLift": 0
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "damaged-storage-download-and-explicit-fresh-workspace-retain-backup",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "malformedBytes": 66,
+      "originalDownloaded": true,
+      "freshWorkspaceExplicit": true,
+      "backupExportedAfterReload": true
+    },
+    "passed": true
+  }
+]

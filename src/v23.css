@@ -1,0 +1,60 @@
+/* V1.13: small-window scroll correctness and an unobstructed transparent container. */
+:root{--v113-lilac:#7464a0;--v113-warm:#fbf9f6}
+html,body{scrollbar-color:#b5a7c6 #efecf2}
+#app{min-height:0}
+.layout{min-height:0;overflow:hidden}
+.workspace{min-height:0;height:100%;overflow-y:scroll!important;overflow-x:hidden!important;scrollbar-gutter:stable!important;overscroll-behavior-y:auto;display:flex;flex-direction:column;align-items:stretch}
+.library-section{overflow-y:auto!important;scrollbar-gutter:stable;overscroll-behavior-y:auto}
+.viewport-shell{min-height:530px;flex:0 0 auto;overflow:hidden}
+.viewport-shell .stage{min-height:350px;flex:1;overflow:hidden}
+.viewport-toolbar{min-height:58px;height:auto;flex:0 0 auto;overflow-x:auto!important;overflow-y:hidden!important;overscroll-behavior-x:contain;scrollbar-gutter:stable;justify-content:flex-start;gap:10px;padding-bottom:2px}
+.viewport-tabs,.viewport-controls{flex:0 0 auto;min-width:max-content}
+.viewport-controls{margin-left:auto}
+.rail{scrollbar-gutter:stable}
+.workspace::-webkit-scrollbar,.library-section::-webkit-scrollbar,.viewport-toolbar::-webkit-scrollbar,.rail::-webkit-scrollbar{width:11px;height:9px}
+.workspace::-webkit-scrollbar-track,.library-section::-webkit-scrollbar-track,.viewport-toolbar::-webkit-scrollbar-track,.rail::-webkit-scrollbar-track{background:#f0edf2;border-radius:12px}
+.workspace::-webkit-scrollbar-thumb,.library-section::-webkit-scrollbar-thumb,.viewport-toolbar::-webkit-scrollbar-thumb,.rail::-webkit-scrollbar-thumb{background:#b4a6c6;border-radius:12px;border:2px solid #f0edf2}
+.workspace::-webkit-scrollbar-thumb:hover,.library-section::-webkit-scrollbar-thumb:hover{background:#8672a7}
+.v113-scroll-controls{display:flex;flex:0 0 auto;align-items:center;gap:6px;min-height:0;color:#756e7b;font-size:11px;justify-content:flex-end}
+.v113-scroll-controls span{margin-right:auto}
+.v113-scroll-controls button{border-radius:11px;border:1px solid #e2d9e8;background:#fffaf8;color:#594b70;min-height:32px;padding:5px 11px;white-space:nowrap;font-size:11px}
+.v113-shellbar{position:absolute;left:14px;bottom:76px;z-index:19;display:flex;gap:4px;align-items:center;max-width:min(96%,520px);min-height:39px;padding:5px;border:1px solid #dfd6e5;border-radius:15px;background:rgba(255,253,251,.95);box-shadow:0 8px 24px #3b345223;backdrop-filter:blur(18px);font-size:11px;color:#5c5566}
+.v113-shellbar>span{padding:0 7px;font-weight:700}
+.v113-shellbar button{border:0;border-radius:10px;padding:8px 11px;min-height:31px;background:transparent;color:#5e576c;font-size:11px;font-weight:650}
+.v113-shellbar button.active{background:linear-gradient(120deg,#675d9e,#8c78b0);color:white;box-shadow:0 4px 13px #65538a40}
+.v113-shellbar label{display:flex;align-items:center;gap:6px;margin:0 4px 0 8px;white-space:nowrap}
+.v113-shellbar input{width:80px;accent-color:var(--v113-lilac)}
+.v113-shellbar output{min-width:32px;text-align:right;font-variant-numeric:tabular-nums}
+#v112-hide-shell{display:none}
+/* The container isn't a welded cage in ghost view. Only a translucent shell remains. */
+.stage-canvases,.stage{background:linear-gradient(145deg,#fdfaf6,#ebe6e8)!important}
+.v112-fullscreen .viewport-shell{overflow:hidden}
+.v112-fullscreen .viewport-toolbar{scrollbar-gutter:stable;height:64px;min-height:64px;max-height:64px}
+.v112-fullscreen .viewport-shell .stage{min-height:0}
+.v112-fullscreen .v113-scroll-controls{display:none}
+button:focus-visible,[role=button]:focus-visible{outline:2px solid #745da2!important;outline-offset:2px!important}
+@media(max-height:760px){.workspace{padding-bottom:15px}.viewport-shell{min-height:465px}.viewport-shell .stage{min-height:340px}.workspace-title{min-height:67px}.quickstart-strip{min-height:35px}.v113-scroll-controls{min-height:29px}}
+@media(max-height:570px){#app{min-height:460px}.viewport-shell{min-height:430px}.viewport-shell .stage{min-height:305px}.v112-fullscreen .viewport-toolbar{height:58px;min-height:58px}.v112-fullscreen .viewport-shell .stage{min-height:0}}
+@media(max-width:920px){.layout{grid-template-rows:51px minmax(0,1fr)!important}.viewport-shell{min-height:480px}.viewport-shell .stage{min-height:335px}.v113-scroll-controls{justify-content:space-between}.v113-scroll-controls span{font-size:10px}}
+@media(max-width:640px){
+ .topbar{min-height:56px}.workspace{padding:0 6px 16px;gap:7px}.viewport-shell{min-height:510px;border-radius:15px}.viewport-shell .stage{min-height:360px}
+ .viewport-toolbar{gap:8px;padding:3px 8px 4px;min-height:62px}.viewport-tabs button{min-width:49px;padding:7px 6px}
+ .viewport-controls .view-tool,.pointer-tool{min-height:35px;flex:0 0 auto}.v113-shellbar{left:8px;bottom:64px;max-width:calc(100% - 16px);gap:2px;padding:4px;font-size:10px}
+ .v113-shellbar>span{padding:0 3px}.v113-shellbar button{padding:7px 8px;font-size:10px}.v113-shellbar label{margin-left:4px;gap:3px;font-size:10px}.v113-shellbar input{width:40px}.v113-shellbar output{min-width:25px}
+ .scene-quick{bottom:7px}.v113-scroll-controls{gap:4px}.v113-scroll-controls span{max-width:42%;line-height:1.25}.v113-scroll-controls button{font-size:10px;padding:6px 8px}
+ .v112-fullscreen .viewport-shell{inset:0;max-height:100dvh;height:100dvh}.v112-fullscreen .viewport-shell .stage{min-height:0!important}
+ .v112-fullscreen .viewport-toolbar{height:63px;min-height:63px}.v112-fullscreen .v113-shellbar{bottom:55px}
+ .v112-fullscreen #v112-exit-fullscreen{top:69px}
+}
+@media(max-width:360px){.v113-shellbar label{font-size:0}.v113-shellbar output{font-size:10px}.v113-shellbar input{width:34px}}
+@media(prefers-reduced-motion:reduce){.v113-shellbar button,.v113-scroll-controls button{transition:none!important;animation:none!important}}
+
+/* Shell controls have their own row; no controls over the cargo canvas. */
+.viewport-shell>.v113-shellbar{position:relative;left:auto;bottom:auto;z-index:2;flex:0 0 auto;display:flex;align-items:center;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;max-width:none;width:calc(100% - 16px);margin:6px 8px 4px;min-height:38px;min-width:0;box-shadow:none;background:linear-gradient(100deg,#f9f7fb,#fffaf5);border:1px solid #eee9ef;white-space:nowrap}
+.viewport-shell>.v113-shellbar button{white-space:nowrap;flex-shrink:0}
+.viewport-shell>.v113-shellbar label{flex:0 0 auto}
+.v112-fullscreen .viewport-shell>.v113-shellbar{margin:4px 8px;width:calc(100% - 16px)}
+@media(max-width:640px){.viewport-shell>.v113-shellbar{margin:3px 5px;width:calc(100% - 10px);min-height:35px}.viewport-shell>.v113-shellbar label{font-size:10px}.v112-fullscreen .viewport-shell>.v113-shellbar{margin:3px 5px;width:calc(100% - 10px)}}
+
+/* Keep paging buttons reachable while the user scrolls the workspace. */
+.v113-scroll-controls{position:sticky;top:0;z-index:11;padding:4px 0;background:linear-gradient(90deg,rgba(250,248,248,.97),rgba(250,248,248,.94));backdrop-filter:blur(8px)}

@@ -1,0 +1,17 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {CARGO_TYPES,dropCandidate,verifyDrop,moveSelection,rotateSelection,sameGroupIds} from '../src/free-studio.mjs';
+import {CONTAINERS,validate} from '../src/engine.mjs';
+const box=CONTAINERS['20GP'];
+const sku=(id,extra={})=>({id,name:id,kind:'carton',L:500,W:400,H:300,weight:15,qty:4,stackLimit:2,rotate:true,allowTilt:false,groupId:'A',...extra});
+function drop(s,placed,p){const a=dropCandidate(s,placed,box,p,{step:25});return a.ok?verifyDrop(a.candidate,placed,box,[s]):a}
+test('supports sixteen named cargo categories; cylinders are documented conservative',()=>{assert.equal(Object.keys(CARGO_TYPES).length,16);assert.equal(CARGO_TYPES.drum.shape,'cylinder');assert.match(CARGO_TYPES.drum.note,/外接矩形/)});
+test('drag and drop places a cargo by its real bounding dimensions',()=>{const a=drop(sku('A'),[],{x:500,y:500});assert.equal(a.ok,true);assert.deepEqual([a.placements[0].x,a.placements[0].y,a.placements[0].z],[250,300,0]);assert.equal(validate(a.placements,box,[sku('A')]).valid,true)});
+test('floor drops cannot exceed order quantity',()=>{const s=sku('A',{qty:1}),first=drop(s,[],{x:500,y:500});const second=dropCandidate(s,first.placements,box,{x:1500,y:500});assert.equal(second.ok,false);assert.match(second.reason,/数量/)});
+test('duplicate placement across carton overlap is rejected',()=>{const s=sku('A'),a=drop(s,[],{x:500,y:500}),b=drop(s,a.placements,{x:500,y:500});assert.equal(b.ok,false);assert.match(b.reason,/重叠/)});
+test('drop outside physical floor is rejected',()=>{const a=dropCandidate(sku('A'),[],box,{x:-500,y:500});assert.equal(a.ok,false);assert.match(a.reason,/边界/)});
+test('bulk move preserves relative offsets',()=>{const s=sku('A'),p1=drop(s,[],{x:500,y:500}).placements[0],p2=drop(s,[p1],{x:1200,y:500}).placements[1];const moved=moveSelection([p1,p2],[p1.id,p2.id],{x:100,y:0,z:0},box,[s]);assert.equal(moved.ok,true);assert.equal(moved.placements[1].x-moved.placements[0].x,p2.x-p1.x)});
+test('bulk move rejects any collision and does not mutate originals',()=>{const s=sku('A'),a=drop(s,[],{x:500,y:500});const b=drop(s,a.placements,{x:1200,y:500});const old=structuredClone(b.placements);const moved=moveSelection(b.placements,[old[1].id],{x:-700,y:0,z:0},box,[s]);assert.equal(moved.ok,false);assert.deepEqual(b.placements,old)});
+test('bulk move rejects locked items',()=>{const s=sku('A'),a=drop(s,[],{x:500,y:500});a.placements[0].locked=true;const r=moveSelection(a.placements,[a.placements[0].id],{x:50},box,[s]);assert.equal(r.ok,false)});
+test('rotation conserves centres and verifies the new geometry',()=>{const s=sku('A',{W:300}),a=drop(s,[],{x:500,y:500});const o=a.placements[0],cx=o.x+o.L/2,cy=o.y+o.W/2;const r=rotateSelection([o],[o.id],box,[s]);assert.equal(r.ok,true);assert.equal(r.placements[0].x+r.placements[0].L/2,cx);assert.equal(r.placements[0].y+r.placements[0].W/2,cy)});
+test('rotating a non-rotatable item is blocked',()=>{const s=sku('A',{rotate:false}),a=drop(s,[],{x:500,y:500});assert.equal(rotateSelection(a.placements,[a.placements[0].id],box,[s]).ok,false)});
+test('selection by shipment group includes only that group',()=>{const a=sku('A',{groupId:'PO-1'}),b=sku('B',{groupId:'PO-2'}),pa=dropCandidate(a,[],box,{x:500,y:500}).candidate,pb=dropCandidate(b,[pa],box,{x:1500,y:500}).candidate;assert.deepEqual(sameGroupIds([pa,pb],[a,b],pa.id),[pa.id])});

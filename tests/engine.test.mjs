@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {CONTAINERS,autoPack,validate,doorFits,intersects,volume,DEMO_SKUS,positiveInput} from '../src/engine.mjs';
+test('official published container template values',()=>{assert.equal(CONTAINERS['20GP'].L,5900);assert.equal(CONTAINERS['40GP'].W,2352);assert.equal(CONTAINERS['40HC'].doorH,2597)});
+test('volume unit conversion',()=>assert.equal(volume({L:1000,W:1000,H:1000}),1));
+test('tangent faces do not intersect',()=>{assert.equal(intersects({x:0,y:0,z:0,L:10,W:10,H:10},{x:10,y:0,z:0,L:10,W:10,H:10}),false)});
+test('door clearance is distinct from interior height',()=>{const c=CONTAINERS['20GP'];assert.equal(doorFits({W:600,H:2350},c),false)});
+test('auto pack never crosses envelope and avoids overlaps',()=>{const r=autoPack(DEMO_SKUS,CONTAINERS['20GP']);assert.equal(r.validation.valid,true);assert.ok(r.placements.length>0);assert.ok(r.validation.weight<=CONTAINERS['20GP'].payload)});
+test('weight gate refuses cargo beyond max payload',()=>{const skus=[{id:'H',name:'Heavy',kind:'crate',L:500,W:500,H:500,weight:20000,qty:2,rotate:false,stackLimit:1}];const r=autoPack(skus,CONTAINERS['20GP']);assert.equal(r.placements.length,1);assert.equal(r.unplaced.length,1)});
+test('unknown unsafe placement detected',()=>{const c=CONTAINERS['20GP'];const sku={id:'S',qty:2};const p=(id,x)=>({id,skuId:'S',x,y:0,z:0,L:100,W:100,H:100,weight:1,stackDepth:1});assert.ok(validate([p('a',0),p('b',50)],c,[sku]).issues.some(x=>x.kind==='collision'))});
+test('reject malformed item sizes',()=>assert.equal(positiveInput({L:-1,W:1,H:1,qty:1,weight:1,stackLimit:1}),false));
+test('locked items stay in place during re-pack',()=>{let s=[{id:'T',name:'test',kind:'carton',L:500,W:400,H:300,weight:10,qty:4,rotate:true,stackLimit:2}];const a=autoPack(s,CONTAINERS['20GP']);const locked=[{...a.placements[0],locked:true}];const b=autoPack(s,CONTAINERS['20GP'],locked);assert.equal(b.placements.length,4);assert.deepEqual(b.placements[0],locked[0]);});

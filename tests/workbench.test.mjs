@@ -1,0 +1,7 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';
+const root=new URL('../',import.meta.url);
+const html=readFileSync(new URL('index.html',root),'utf8'),app=readFileSync(new URL('src/app.mjs',root),'utf8'),webgl=readFileSync(new URL('src/webgl.mjs',root),'utf8');
+test('import wizard offers mapping preview and confirm stages',()=>{for(const id of ['import-file-pane','import-map-pane','import-review-pane','import-map-grid','import-preview-body','import-strategy','import-confirm'])assert.ok(html.includes(`id="${id}"`))});
+test('editor separates XYZ numeric inputs and six directional nudges',()=>{for(const id of ['edit-x','edit-y','edit-z','edit-snap','edit-drag-axis','edit-apply','edit-to-floor','edit-align-left','edit-align-back'])assert.ok(html.includes(id));for(const axis of ['x','y','z'])for(const sign of ['-1','1'])assert.ok(html.includes(`data-nudge="${axis}:${sign}"`))});
+test('gizmo uses actual view-projection camera and axis movement preview',()=>{assert.ok(webgl.includes('gizmoEvents()'));assert.ok(webgl.includes('this.project(world)'));assert.ok(webgl.includes('this.queuePreview(drag.id'));assert.ok(webgl.includes('this.handlers.commitPreview?.(id)'))});
+test('existing solver and safety warning remain enabled',()=>{assert.match(app,/autoPack\(/);assert.match(app,/modifyPlacement\(/);assert.match(html,/装卸路径与运输安全/)});

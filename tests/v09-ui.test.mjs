@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';
+import {packageParts} from '../src/package-geometry.mjs';
+const root=new URL('../',import.meta.url),file=p=>readFileSync(new URL(p,root),'utf8');
+const html=file('index.html'),app=file('src/app.mjs'),webgl=file('src/webgl.mjs'),importer=file('src/importer.mjs');
+const ids=[...html.matchAll(/\bid="([^"]+)"/g)].map(m=>m[1]);
+test('every document ID is unique',()=>assert.equal(ids.length,new Set(ids).size));
+test('free loading workbench and its tools are discoverable',()=>{for(const name of ['library-free','free-palette','free-select-group','free-select-all','free-rotate','free-to-floor','free-lock','free-remove','free-drop-hint'])assert.ok(ids.includes(name),name)});
+test('free workbench supports axial numerics and visibility toggles',()=>{for(const key of ['x:-1','x:1','y:-1','y:1','z:-1','z:1'])assert.match(html,new RegExp(key));for(const key of ['axes','coords','tags'])assert.match(html,new RegExp(`data-free-display="${key}"`))});
+test('manual dropping verifies actual geometry before saving',()=>{assert.match(app,/suggestSupportedDrop\(sku,s\.placements,s\.box/);assert.match(app,/moveSelection\(/);assert.match(app,/rotateSelection\(/)});
+test('true cylinder geometry and extra package materials are included in WebGL',()=>{assert.match(webgl,/makeCylinder/);for(const kind of ['ibc','drum','bag','roll'])assert.ok(packageParts({kind,L:800,W:600,H:600}).length>0,kind)});
+test('importer recognizes the four extra packaging categories',()=>{for(const name of ['吨袋','钢桶','周转箱','卷材'])assert.ok(importer.includes(name),name)});

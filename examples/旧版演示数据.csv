@@ -1,0 +1,4 @@
+sku,name,length,width,height,weight,qty,kind,stacklimit
+SKU-001,普通瓦楞纸箱-演示,600,400,380,16,36,carton,4
+SKU-002,欧洲托盘整托-演示,1200,800,1150,360,6,pallet,1
+SKU-003,出口木箱-演示,900,700,850,115,5,crate,1

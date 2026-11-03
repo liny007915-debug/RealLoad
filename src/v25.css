@@ -1,0 +1,58 @@
+/* V1.15 — fluid camera canvas, emergency unload cues, short-screen first. */
+:root{--v115-radius:13px;--v115-urgent:#b65348;--v115-high:#ac793b;--v115-ink:#332d42;--v115-purple:#7661a9}
+.v115-priority{display:inline-flex;align-items:center;justify-content:center;vertical-align:baseline;border-radius:8px;padding:2px 6px;margin-right:6px;font-style:normal;font-weight:750;letter-spacing:.02em;font-size:11px;background:#faebe7;color:#a4453b;white-space:nowrap}
+.v115-priority.high{background:#fff1d7;color:#80511f}.v115-priority.urgent{background:#fbe1dc;color:#a73932}
+.sku-card strong:has(.v115-priority){line-height:1.55}
+.v115-badge{display:inline-flex;align-items:center;border:1px solid #f0d8d0;color:#a7473e;background:#fff5f1;font-size:11px;border-radius:9px;padding:5px 8px}
+.v115-priority-banner{margin:6px 0;padding:9px 11px;background:linear-gradient(110deg,#fff6ed,#fffaf7);border:1px solid #efdace;border-radius:12px;line-height:1.6;font-size:11px;color:#845140}
+/* Short screen: show THE WHOLE 3-D canvas at once; rest of the page still scrolls.
+ * In full-screen mode the stage fills the remaining window, with no fixed min. */
+@media(max-width:640px),(max-height:700px){
+ .viewport-shell:not(.v115-fs-marker){height:auto!important;min-height:0!important;max-height:none!important;flex:0 0 auto!important}
+ .viewport-shell:not(.v115-fs-marker)>.stage{height:clamp(200px,calc(100dvh - 260px),370px)!important;min-height:0!important;flex:0 0 auto!important;max-height:none!important}
+ .stage-canvases,.view-cell{min-height:0!important}
+ .scene-guidance,.stage-inset-top,.scene-top-left{display:none!important}
+ .v114-wheel-note{min-height:0!important;line-height:1.25}
+ .v114-unload-timeline{padding:9px 10px!important;gap:7px}
+ .v114-timeline-scroll{min-height:48px}
+ .v114-step{min-width:128px;padding:6px 7px}
+ .viewport-shell{scroll-margin-top:6px}
+}
+.v112-fullscreen .viewport-shell{height:100dvh!important;max-height:100dvh!important;min-height:0!important}
+.v112-fullscreen .viewport-shell>.stage,.v112-fullscreen .viewport-shell .stage{height:auto!important;flex:1 1 auto!important;min-height:0!important;max-height:none!important}
+/* Browser fullscreen controls must remain reachable and content-first. */
+#fit-view{display:inline-flex;align-items:center;gap:5px;min-width:57px}
+#fit-view .v115-fit-label{font-size:11px;font-weight:700}
+@media(max-width:640px){#fit-view{min-width:64px}.v113-shellbar{scrollbar-width:thin}}
+button:focus-visible,select:focus-visible{outline:2px solid #8064b4;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){.v115-priority{transition:none}}
+@media(max-width:640px),(max-height:700px){
+ /* Keep important actions in the top navigation, collapse explanatory chrome. */
+ .workspace-title,.quickstart-strip{display:none!important}
+ .v114-wheel-note{display:none!important}
+ .viewport-shell:not(.v115-fs-marker)>.stage{height:clamp(190px,calc(100dvh - 215px),380px)!important}
+}
+@media(max-height:570px){
+ .viewport-shell:not(.v115-fs-marker)>.stage{height:clamp(160px,calc(100dvh - 215px),290px)!important}
+}
+.v112-fullscreen .workspace-title,.v112-fullscreen .quickstart-strip{display:none!important}
+/* Mobile expanded cargo library docks below the viewport rather than covering
+ * the cargo model. Its own scroll area remains accessible to trackpad/wheel. */
+@media(max-width:920px){
+ .layout:has(>.library:not(.collapsed)){grid-template-rows:51px minmax(220px,1fr) minmax(160px,38dvh)!important}
+ .layout:has(>.library:not(.collapsed))>.workspace{grid-row:2!important;grid-column:1!important;min-height:0!important}
+ .layout:has(>.library:not(.collapsed))>.library{grid-row:3!important;grid-column:1!important;position:relative!important;inset:auto!important;width:100%!important;height:100%!important;min-height:0!important;transform:none!important;opacity:1!important;pointer-events:auto!important;box-shadow:0 -4px 12px #2f214414!important;border-top:1px solid #e5dcea;border-right:0}
+ .layout:has(>.library:not(.collapsed)) .viewport-shell>.stage{height:clamp(120px,19dvh,240px)!important;min-height:0!important}
+ .layout:has(>.library:not(.collapsed)) .viewport-shell{min-height:0!important}
+ .layout:has(>.library:not(.collapsed)) .workspace{padding-bottom:4px!important}
+ .layout:has(>.library:not(.collapsed)) .library-section{overflow-y:auto!important}
+}
+@media(max-height:550px){.viewport-shell:not(.v115-fs-marker)>.stage{height:clamp(160px,calc(100dvh - 240px),280px)!important}}
+.v112-fullscreen .layout:has(>.library:not(.collapsed)) .viewport-shell>.stage{height:auto!important;flex:1 1 auto!important}
+@media(max-width:920px){
+ .layout:has(>.library:not(.collapsed)) .viewport-toolbar,
+ .layout:has(>.library:not(.collapsed)) .viewport-shell>.v113-shellbar{display:none!important}
+ .layout:has(>.library:not(.collapsed)) .viewport-shell>.stage{height:clamp(175px,33dvh,300px)!important}
+}
+.v112-fullscreen .layout:has(>.library:not(.collapsed)) .viewport-toolbar{display:flex!important}
+.v112-fullscreen .layout:has(>.library:not(.collapsed)) .viewport-shell>.v113-shellbar{display:flex!important}

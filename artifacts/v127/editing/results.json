@@ -1,0 +1,428 @@
+[
+  {
+    "name": "container-draft-enter-1440",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "box": {
+        "id": "CUSTOM",
+        "label": "自定义箱体",
+        "L": 6200,
+        "W": 2352,
+        "H": 2395,
+        "doorW": 2340,
+        "doorH": 2292,
+        "payload": 28130,
+        "tare": 2350,
+        "source": "",
+        "verified": "User supplied"
+      },
+      "units": 3
+    },
+    "passed": true
+  },
+  {
+    "name": "container-draft-enter-390",
+    "viewport": {
+      "width": 390,
+      "height": 700
+    },
+    "evidence": {
+      "box": {
+        "id": "CUSTOM",
+        "label": "自定义箱体",
+        "L": 6200,
+        "W": 2352,
+        "H": 2395,
+        "doorW": 2340,
+        "doorH": 2292,
+        "payload": 28130,
+        "tare": 2350,
+        "source": "",
+        "verified": "User supplied"
+      },
+      "units": 3
+    },
+    "passed": true
+  },
+  {
+    "name": "container-conflict-reflow-and-undo",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "before": 5900,
+      "after": 3500,
+      "ids": [
+        "SIM-ROUTE-REAR#1",
+        "SIM-ROUTE-DOOR#1",
+        "SIM-ROUTE-MIDDLE#1"
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "container-edit-in-native-fullscreen",
+    "viewport": {
+      "width": 876,
+      "height": 672
+    },
+    "evidence": {
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 876,
+        "height": 672
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "first-drag-keeps-canvas-and-untouched-axis",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "canvas": {
+        "x": 371,
+        "y": 223,
+        "width": 1050,
+        "height": 430.5625
+      },
+      "during": {
+        "x": 371,
+        "y": 223,
+        "width": 1050,
+        "height": 430.5625
+      },
+      "before": [
+        [
+          "SIM-ROUTE-REAR#1",
+          400,
+          20,
+          0,
+          800,
+          700,
+          700
+        ]
+      ],
+      "after": [
+        [
+          "SIM-ROUTE-REAR#1",
+          914.14,
+          20,
+          0,
+          800,
+          700,
+          700
+        ]
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "direct-drag-side",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "before": [
+        [
+          "SIM-ROUTE-REAR#1",
+          400,
+          20,
+          0,
+          800,
+          700,
+          700
+        ]
+      ],
+      "after": [
+        [
+          "SIM-ROUTE-REAR#1",
+          800,
+          20,
+          0,
+          800,
+          700,
+          700
+        ]
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "direct-drag-door",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "before": [
+        [
+          "SIM-ROUTE-DOOR#1",
+          4600,
+          0,
+          0,
+          1200,
+          1800,
+          2000
+        ]
+      ],
+      "after": [
+        [
+          "SIM-ROUTE-DOOR#1",
+          4600,
+          400,
+          0,
+          1200,
+          1800,
+          2000
+        ]
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "gizmo-nudge-lock-cancel-and-preview-readonly",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "step": 50,
+      "selected": null
+    },
+    "passed": true
+  },
+  {
+    "name": "touch-intentional-move-and-default-scroll",
+    "viewport": {
+      "width": 390,
+      "height": 700
+    },
+    "evidence": {
+      "before": [
+        [
+          "SIM-ROUTE-REAR#1",
+          400,
+          20,
+          0,
+          800,
+          700,
+          700
+        ]
+      ],
+      "after": [
+        [
+          "SIM-ROUTE-REAR#1",
+          1000,
+          20,
+          0,
+          800,
+          700,
+          700
+        ]
+      ],
+      "sizes": [
+        {
+          "w": 107.328125,
+          "h": 44
+        },
+        {
+          "w": 107.328125,
+          "h": 44
+        },
+        {
+          "w": 107.34375,
+          "h": 44
+        },
+        {
+          "w": 107.328125,
+          "h": 44
+        },
+        {
+          "w": 107.328125,
+          "h": 44
+        },
+        {
+          "w": 107.34375,
+          "h": 44
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "dispatch-preview-and-order-1440",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "order": [
+        "SIM-DISPATCH-GATE#1",
+        "SIM-DISPATCH-COOL#2",
+        "SIM-DISPATCH-COOL#1",
+        "SIM-DISPATCH-LIGHT#2",
+        "SIM-DISPATCH-LIGHT#1",
+        "SIM-DISPATCH-PALLET#1",
+        "SIM-DISPATCH-IRR#1",
+        "SIM-DISPATCH-CRATE#1",
+        "SIM-DISPATCH-HEAVY#1"
+      ],
+      "units": 9
+    },
+    "passed": true
+  },
+  {
+    "name": "dispatch-preview-and-order-320",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "evidence": {
+      "order": [
+        "SIM-DISPATCH-GATE#1",
+        "SIM-DISPATCH-COOL#2",
+        "SIM-DISPATCH-COOL#1",
+        "SIM-DISPATCH-LIGHT#2",
+        "SIM-DISPATCH-LIGHT#1",
+        "SIM-DISPATCH-PALLET#1",
+        "SIM-DISPATCH-IRR#1",
+        "SIM-DISPATCH-CRATE#1",
+        "SIM-DISPATCH-HEAVY#1"
+      ],
+      "units": 9
+    },
+    "passed": true
+  },
+  {
+    "name": "edit-dispatch-refreshes-order-and-export-round-trip",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "orderBefore": [
+        "SIM-DISPATCH-GATE#1",
+        "SIM-DISPATCH-COOL#2",
+        "SIM-DISPATCH-COOL#1",
+        "SIM-DISPATCH-LIGHT#2",
+        "SIM-DISPATCH-LIGHT#1",
+        "SIM-DISPATCH-PALLET#1",
+        "SIM-DISPATCH-IRR#1",
+        "SIM-DISPATCH-CRATE#1",
+        "SIM-DISPATCH-HEAVY#1"
+      ],
+      "orderAfter": [
+        "SIM-DISPATCH-GATE#1",
+        "SIM-DISPATCH-LIGHT#2",
+        "SIM-DISPATCH-LIGHT#1",
+        "SIM-DISPATCH-PALLET#1",
+        "SIM-DISPATCH-IRR#1",
+        "SIM-DISPATCH-CRATE#1",
+        "SIM-DISPATCH-COOL#2",
+        "SIM-DISPATCH-COOL#1",
+        "SIM-DISPATCH-HEAVY#1"
+      ],
+      "metadata": [
+        [
+          "SIM-DISPATCH-HEAVY",
+          "low",
+          3
+        ],
+        [
+          "SIM-DISPATCH-COOL",
+          "low",
+          3
+        ],
+        [
+          "SIM-DISPATCH-IRR",
+          "normal",
+          2
+        ],
+        [
+          "SIM-DISPATCH-PALLET",
+          "normal",
+          2
+        ],
+        [
+          "SIM-DISPATCH-LIGHT",
+          "high",
+          1
+        ],
+        [
+          "SIM-DISPATCH-CRATE",
+          "normal",
+          3
+        ],
+        [
+          "SIM-DISPATCH-GATE",
+          "low",
+          3
+        ]
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "import-dispatch-csv-keeps-logistics",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "skus": [
+        [
+          "SIM-DISPATCH-HEAVY",
+          860,
+          "low",
+          3
+        ],
+        [
+          "SIM-DISPATCH-COOL",
+          22,
+          "urgent",
+          1
+        ],
+        [
+          "SIM-DISPATCH-IRR",
+          280,
+          "normal",
+          2
+        ],
+        [
+          "SIM-DISPATCH-PALLET",
+          620,
+          "normal",
+          2
+        ],
+        [
+          "SIM-DISPATCH-LIGHT",
+          6,
+          "high",
+          1
+        ],
+        [
+          "SIM-DISPATCH-CRATE",
+          135,
+          "normal",
+          3
+        ],
+        [
+          "SIM-DISPATCH-GATE",
+          780,
+          "low",
+          3
+        ]
+      ]
+    },
+    "passed": true
+  }
+]

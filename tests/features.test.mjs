@@ -1,0 +1,10 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';
+import {quoteEstimate} from '../src/quote.mjs';
+import {webglMath} from '../src/webgl.mjs';
+const index=readFileSync(new URL('../index.html',import.meta.url),'utf8'),app=readFileSync(new URL('../src/app.mjs',import.meta.url),'utf8');
+test('user rates produce auditable freight estimate',()=>{const x=quoteEstimate({base:200,origin:50,destination:60,perCbm:2,perKg:.1,currency:'USD'},10,100);assert.equal(x.total,200+50+60+20+10);assert.equal(x.breakdown.volumeFee,20)});
+test('quote rejects negatives or nonfinite input',()=>{assert.throws(()=>quoteEstimate({base:-1},0,0));assert.throws(()=>quoteEstimate({base:Infinity},0,0));});
+test('scene settings include independent axes, precise XYZ tags, dimensions, walls and grids',()=>{for(const key of ['axes','coords','tags','dimensions','walls','grid'])assert.match(index,new RegExp(`data-display="${key}"`));assert.match(index,/coords-scope/);assert.match(app,/opts\.coordsScope/)});
+test('viewport matrix invert roundtrips three-dimensional point',()=>{const {mul,perspective,lookAt,transform,inv}=webglMath;const vp=mul(perspective(Math.PI/4,1.4,.1,100),lookAt([5,4,7],[0,0,0]));const inverse=inv(vp),p=[.3,.5,.8],q=transform(vp,...p),back=transform(inverse,...q);p.forEach((n,i)=>assert.ok(Math.abs(n-back[i])<1e-4))});
+test('ray-AABB intersection detects valid hit and miss',()=>{const b={min:[0,0,0],max:[2,2,2]};assert.equal(webglMath.rayBox([-3,1,1],[1,0,0],b),3);assert.equal(webglMath.rayBox([-3,3,1],[1,0,0],b),null)});
+test('centralized cargo add, remove, orientation and position handlers are present',()=>{for(const key of ['quick-add','quick-delete','quick-rotate','position-x','orientation-options','quote-total','step-range'])assert.ok(index.includes(key)||app.includes(key))});

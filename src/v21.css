@@ -1,0 +1,59 @@
+/* V1.11 — task-oriented, physically grounded visual system. */
+:root{--r-control:12px;--r-panel:20px;--r-dialog:24px;--accent:#5c568d;--accent-weak:#f0ecfa;--v21-ink:#24232c;--v21-clay:#c4825f;--v21-subtle:#77737f}
+body{background:radial-gradient(ellipse 65% 48% at 86% -13%,#e8e0f5 0%,transparent 78%),linear-gradient(155deg,#f9f7f3 0%,#f4f1f5 55%,#f9f6ef 100%);color:var(--v21-ink)}
+.topbar{box-shadow:0 2px 16px rgba(43,34,51,.045);background:rgba(255,254,252,.89);border-bottom:1px solid rgba(72,56,78,.1)}
+.rail{background:linear-gradient(135deg,rgba(255,254,252,.95),rgba(248,243,246,.92));border-bottom:1px solid #e9e3e7}
+.rail-item{border-radius:var(--r-control)!important;transition:background .18s ease,transform .18s ease,box-shadow .18s ease}
+.rail-item.active{background:linear-gradient(125deg,#e8e3f5 0%,#f7eae6 100%)!important;box-shadow:inset 0 0 0 1px #e1d6e6,0 3px 8px #6e587b13}
+button,select,input,summary{font-family:inherit}
+button:not(:disabled){transition:background-color .17s ease,box-shadow .17s ease,transform .17s ease,border-color .17s ease}
+button:not(:disabled):active{transform:scale(.975)}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid #7764b9;outline-offset:3px}
+.action-btn,#pack-btn{border-radius:var(--r-control);background:linear-gradient(118deg,#61568e,#8e76b9);box-shadow:0 7px 18px #4f417c24}
+.viewport-tabs,.pointer-tool-group{border-radius:var(--r-control)}
+.view-tool,.pointer-tool,.scene-round{border-radius:var(--r-control)!important}
+.scene-preset-bar{border-radius:var(--r-control)}
+.scene-preset-bar button{border-radius:10px}
+.stage{background:linear-gradient(146deg,#f7f5f1 0%,#eae7ea 100%)!important}
+.unload-active .stage{background:radial-gradient(ellipse at 64% 36%,#f5f3f9,#ede9e9 71%)!important}
+.unload-scene-hud{position:absolute;right:20px;top:76px;width:268px;z-index:12;padding:17px 17px 12px;background:linear-gradient(145deg,rgba(255,254,251,.97),rgba(252,248,250,.94));backdrop-filter:blur(22px);box-shadow:0 18px 45px #25223624,0 2px 10px #302a3010;border:1px solid #fff;border-radius:22px;display:flex;flex-direction:column;gap:10px;animation:hud-enter .32s cubic-bezier(.18,.9,.24,1) both}
+.unload-scene-hud.hidden{display:none!important}
+.unload-hud-overline{display:flex;align-items:center;gap:8px;color:#756f7f;font-size:11px;font-weight:650}
+.unload-hud-overline strong{margin-left:auto;font-size:12px;font-variant-numeric:tabular-nums;color:#50485a}
+.unload-hud-marker{width:9px;height:9px;border-radius:50%;background:#7873b7;box-shadow:0 0 0 3px #e9e6f5}.unload-hud-marker.warn{background:#d08b66;box-shadow:0 0 0 3px #f7e8dc}
+.unload-hud-track{height:5px;background:#ece8ef;border-radius:99px;overflow:hidden}.unload-hud-track span{display:block;height:100%;width:0;background:linear-gradient(90deg,#6962a6,#d19a86);border-radius:inherit;transition:width .38s ease}
+.unload-hud-sub{font-size:10px;color:#777080}.unload-hud-title{font-size:19px;font-weight:730;letter-spacing:-.6px;color:#2d293b;line-height:1.25;overflow-wrap:anywhere}
+.unload-hud-detail{margin:0;color:#666170;font-size:11px;line-height:1.65;min-height:45px}
+.unload-hud-actions{display:grid;gap:7px}
+.unload-hud-actions button{display:flex;align-items:center;justify-content:center;gap:8px;min-height:38px;border:1px solid #e2dce8;border-radius:12px;background:#fff;color:#65598d;font-size:11px;font-weight:680;cursor:pointer}
+.unload-hud-actions .unload-hud-main{min-height:45px;color:#fff;border:0;background:linear-gradient(115deg,#5b518d,#8165b8 64%,#b47c9f);box-shadow:0 8px 16px #71609c2b;font-size:12px}
+.unload-hud-actions button:disabled{opacity:.46;box-shadow:none;cursor:not-allowed}
+.unload-hud-actions kbd{font:600 10px inherit;border-radius:5px;background:#ffffff25;padding:3px 6px}.unload-hud-actions button:not(.unload-hud-main) kbd{background:#f0ecf8}
+.unload-hud-foot{display:flex;justify-content:space-between;gap:8px;border-top:1px solid #ede8ee;padding-top:10px}
+.unload-hud-foot button{padding:4px 0;background:transparent;border:0;cursor:pointer;color:#756c84;font-size:10px;font-weight:600}.unload-hud-foot button:disabled{opacity:.35}
+.unload-list-controls{display:flex;align-items:center;justify-content:space-between;gap:6px;padding:5px 0 9px}.unload-list-controls>span{color:#77717b;font-size:10px;white-space:nowrap}
+.unload-list-pills{display:flex;padding:3px;gap:2px;background:#f1eef2;border-radius:11px}.unload-list-pills button{border:0;background:transparent;border-radius:8px;padding:6px 8px;font-size:10px;font-weight:650;color:#706b7b;cursor:pointer}.unload-list-pills button.active{color:#51477e;background:#fff;box-shadow:0 1px 6px #554a7424}
+.unload-item{border-radius:var(--r-control)!important;transition:transform .18s ease,background .18s ease,box-shadow .18s ease}
+.unload-item:hover{transform:translateX(2px)}.unload-item.active{background:#f1effc;border-color:#b3a8e1;box-shadow:0 3px 14px #64518d10}
+.unload-active .scene-top-left{opacity:.82}.unload-active .scene-guidance{max-width:410px}
+.unload-complete-flash{animation:unload-done .5s ease}
+@keyframes unload-done{0%{box-shadow:0 0 0 0 #cbb2ef99,0 18px 45px #25223624}60%{box-shadow:0 0 0 9px #cbb2ef15,0 18px 45px #25223624}100%{box-shadow:0 18px 45px #25223624}}
+@keyframes hud-enter{from{opacity:0;transform:translateY(11px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1180px){.unload-scene-hud{width:230px;padding:13px;right:12px;top:58px}.unload-hud-title{font-size:16px}}
+@media(max-width:740px){.unload-scene-hud{top:16px;bottom:auto;right:9px;width:min(250px,65vw);padding:10px 11px;gap:6px;border-radius:16px}.unload-hud-title{font-size:14px}.unload-hud-detail{font-size:10px;min-height:0;max-height:45px;overflow:auto}.unload-hud-actions{grid-template-columns:1fr 1fr;gap:5px}.unload-hud-actions button,.unload-hud-actions .unload-hud-main{min-height:34px;font-size:10px;line-height:1.1;padding:5px}.unload-hud-actions kbd{display:none}.unload-hud-foot button{font-size:9px}.unload-list-controls{flex-wrap:wrap}.unload-hud-overline,.unload-hud-sub{font-size:9px}}
+@media(prefers-reduced-motion:reduce){.unload-scene-hud,.unload-complete-flash{animation:none!important}.unload-hud-track span,button{transition:none!important}}
+
+/* The unloading workbench has one primary action, not two competing toolbars. */
+.unload-active #library-unload .unload-toolbar #unload-next-auto,
+.unload-active #library-unload .unload-toolbar #unload-undo{display:none!important}
+.unload-active #library-unload .unload-toolbar{grid-template-columns:1fr 1fr;gap:6px}
+.unload-active #library-unload .unload-toolbar #unload-suggest{grid-column:auto;min-height:33px;font-size:10px}
+.unload-active #library-unload .unload-toolbar #unload-reset{min-height:33px;font-size:10px}
+.unload-active .locator-panel,.unload-active .locator-quick,.unload-active .scene-quick,.unload-active .scene-readout{display:none!important}
+.unload-active .stage-inset-top{opacity:.7}
+@media(max-width:920px){.unload-active .workspace{min-width:0}.unload-active .unload-scene-hud{pointer-events:auto}}
+
+/* No duplicate tutorial and next-action cards in the unloading pane. */
+.unload-active .unload-flow-guide,.unload-active #unload-next{display:none!important}
+.unload-active .unload-title{padding-top:2px}
+.unload-active .unload-title p{font-size:11px;line-height:1.55}

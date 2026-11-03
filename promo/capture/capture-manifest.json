@@ -1,0 +1,425 @@
+{
+  "createdAt": "2026-11-03T08:42:19.314Z",
+  "sourceFixture": "examples/v127-beta-mixed-specs.json",
+  "sourceType": "Synthetic QA data; not manufacturer specifications or transport certification",
+  "viewport": {
+    "width": 1600,
+    "height": 900
+  },
+  "fps": 25,
+  "format": "WebM / VP8",
+  "browser": "Google Chrome, headless, software WebGL2 (--enable-unsafe-swiftshader)",
+  "server": "http://127.0.0.1:4266/",
+  "clips": [
+    {
+      "name": "01-fullscreen-orbit",
+      "file": "01-fullscreen-orbit.webm",
+      "rawDurationSeconds": 11.92,
+      "usableStartSeconds": 2.751,
+      "usableEndSeconds": 10.358,
+      "usableDurationSeconds": 7.607,
+      "timingNote": "Trim markers are wall-clock seconds from page creation; allow approximately 0.2 s video first-frame tolerance.",
+      "marks": [
+        {
+          "label": "usable-start",
+          "atSeconds": 2.751
+        },
+        {
+          "label": "usable-end",
+          "atSeconds": 10.358
+        }
+      ],
+      "evidence": {
+        "nativeFullscreen": true,
+        "cargoCount": 18,
+        "packagingKinds": 16
+      },
+      "pageErrors": [],
+      "error": null,
+      "recommendedTrim": {
+        "startSeconds": 2.751,
+        "endSeconds": 10.358,
+        "durationSeconds": 7.607
+      },
+      "verifiedMediaMetadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp8",
+            "width": 1600,
+            "height": 900,
+            "r_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "duration": "11.920000"
+        }
+      }
+    },
+    {
+      "name": "02-precise-cargo-edit",
+      "file": "02-precise-cargo-edit.webm",
+      "rawDurationSeconds": 10.72,
+      "usableStartSeconds": 2.761,
+      "usableEndSeconds": 8.958,
+      "usableDurationSeconds": 6.197,
+      "timingNote": "Trim markers are wall-clock seconds from page creation; allow approximately 0.2 s video first-frame tolerance.",
+      "marks": [
+        {
+          "label": "usable-start",
+          "atSeconds": 2.761
+        },
+        {
+          "label": "validated-position-applied",
+          "atSeconds": 5.345
+        },
+        {
+          "label": "usable-end",
+          "atSeconds": 8.958
+        }
+      ],
+      "evidence": {
+        "unit": "BETA-MIXED#1",
+        "before": {
+          "x": "200",
+          "y": "150"
+        },
+        "afterX": 700,
+        "interaction": "Real validated XYZ position form"
+      },
+      "pageErrors": [],
+      "error": null,
+      "recommendedTrim": {
+        "startSeconds": 2.761,
+        "endSeconds": 8.958,
+        "durationSeconds": 6.197
+      },
+      "verifiedMediaMetadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp8",
+            "width": 1600,
+            "height": 900,
+            "r_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "duration": "10.720000"
+        }
+      }
+    },
+    {
+      "name": "03-shell-opacity-and-doors",
+      "file": "03-shell-opacity-and-doors.webm",
+      "rawDurationSeconds": 13.4,
+      "usableStartSeconds": 2.968,
+      "usableEndSeconds": 11.72,
+      "usableDurationSeconds": 8.753,
+      "timingNote": "Trim markers are wall-clock seconds from page creation; allow approximately 0.2 s video first-frame tolerance.",
+      "marks": [
+        {
+          "label": "usable-start",
+          "atSeconds": 2.968
+        },
+        {
+          "label": "opacity-80",
+          "atSeconds": 5.288
+        },
+        {
+          "label": "opacity-20",
+          "atSeconds": 7.697
+        },
+        {
+          "label": "usable-end",
+          "atSeconds": 11.72
+        }
+      ],
+      "evidence": {
+        "opacityPercent": [
+          35,
+          80,
+          20
+        ],
+        "doorAngles": [
+          0,
+          112
+        ],
+        "structure": "Complete body"
+      },
+      "pageErrors": [],
+      "error": null,
+      "recommendedTrim": {
+        "startSeconds": 2.968,
+        "endSeconds": 11.72,
+        "durationSeconds": 8.752
+      },
+      "verifiedMediaMetadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp8",
+            "width": 1600,
+            "height": 900,
+            "r_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "duration": "13.400000"
+        }
+      }
+    },
+    {
+      "name": "04-shared-coordinate-four-views",
+      "file": "04-shared-coordinate-four-views.webm",
+      "rawDurationSeconds": 13.84,
+      "usableStartSeconds": 2.442,
+      "usableEndSeconds": 12.244,
+      "usableDurationSeconds": 9.802,
+      "timingNote": "Trim markers are wall-clock seconds from page creation; allow approximately 0.2 s video first-frame tolerance.",
+      "marks": [
+        {
+          "label": "usable-start",
+          "atSeconds": 2.442
+        },
+        {
+          "label": "view-iso",
+          "atSeconds": 2.459
+        },
+        {
+          "label": "view-top",
+          "atSeconds": 4.394
+        },
+        {
+          "label": "view-door",
+          "atSeconds": 6.322
+        },
+        {
+          "label": "view-side",
+          "atSeconds": 8.259
+        },
+        {
+          "label": "view-multi",
+          "atSeconds": 10.231
+        },
+        {
+          "label": "usable-end",
+          "atSeconds": 12.244
+        }
+      ],
+      "evidence": {
+        "views": [
+          "iso",
+          "top",
+          "door",
+          "side",
+          "multi"
+        ],
+        "cargoCount": 18
+      },
+      "pageErrors": [],
+      "error": null,
+      "recommendedTrim": {
+        "startSeconds": 2.442,
+        "endSeconds": 12.244,
+        "durationSeconds": 9.802
+      },
+      "verifiedMediaMetadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp8",
+            "width": 1600,
+            "height": 900,
+            "r_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "duration": "13.840000"
+        }
+      }
+    },
+    {
+      "name": "05-ordered-load-and-unload",
+      "file": "05-ordered-load-and-unload.webm",
+      "rawDurationSeconds": 27.04,
+      "usableStartSeconds": 3.098,
+      "usableEndSeconds": 27.121,
+      "usableDurationSeconds": 24.024,
+      "timingNote": "Trim markers are wall-clock seconds from page creation; allow approximately 0.2 s video first-frame tolerance.",
+      "marks": [
+        {
+          "label": "usable-start",
+          "atSeconds": 3.098
+        },
+        {
+          "label": "load-animation-start",
+          "atSeconds": 4.19
+        },
+        {
+          "label": "load-animation-complete",
+          "atSeconds": 14.419
+        },
+        {
+          "label": "unload-animation-start",
+          "atSeconds": 15.823
+        },
+        {
+          "label": "unload-animation-complete",
+          "atSeconds": 26.118
+        },
+        {
+          "label": "usable-end",
+          "atSeconds": 27.121
+        }
+      ],
+      "evidence": {
+        "loadCompleted": 18,
+        "unloadCompleted": 18,
+        "speed": 2,
+        "previewOnly": true,
+        "planningMode": "Strict straight-line, validated mixed fixture"
+      },
+      "pageErrors": [],
+      "error": null,
+      "recommendedTrim": {
+        "startSeconds": 3.098,
+        "endSeconds": 26.74,
+        "durationSeconds": 23.642
+      },
+      "verifiedMediaMetadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp8",
+            "width": 1600,
+            "height": 900,
+            "r_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "duration": "27.040000"
+        }
+      }
+    },
+    {
+      "name": "06-independent-physical-specifications",
+      "file": "06-independent-physical-specifications.webm",
+      "rawDurationSeconds": 12.88,
+      "usableStartSeconds": 4.533,
+      "usableEndSeconds": 12.218,
+      "usableDurationSeconds": 7.686,
+      "timingNote": "Trim markers are wall-clock seconds from page creation; allow approximately 0.2 s video first-frame tolerance.",
+      "marks": [
+        {
+          "label": "usable-start",
+          "atSeconds": 4.533
+        },
+        {
+          "label": "future-template-updated",
+          "atSeconds": 7.624
+        },
+        {
+          "label": "usable-end",
+          "atSeconds": 12.218
+        }
+      ],
+      "evidence": {
+        "originalUnit": "BETA-MIXED#1",
+        "originalDimensions": [
+          450,
+          350,
+          320
+        ],
+        "originalMassKg": 12,
+        "futureTemplateLengthMm": 700,
+        "futureTemplateMassKg": 42,
+        "retainedOldUnits": 3
+      },
+      "pageErrors": [],
+      "error": null,
+      "recommendedTrim": {
+        "startSeconds": 4.533,
+        "endSeconds": 12.218,
+        "durationSeconds": 7.685
+      },
+      "verifiedMediaMetadata": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "vp8",
+            "width": 1600,
+            "height": 900,
+            "r_frame_rate": "25/1"
+          }
+        ],
+        "format": {
+          "duration": "12.880000"
+        }
+      }
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "cover-fullscreen-mixed-cargo.png",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "file": "clean-fullscreen-container.png",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "file": "precise-position-editor.png",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "file": "transparent-body-open-doors.png",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "file": "four-shared-coordinate-views.png",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "file": "load-sequence-complete.png",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "file": "unload-motion-and-sequence.png",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "file": "old-physical-specs-retained.png",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "file": "selected-original-physical-cargo.png",
+      "width": 1600,
+      "height": 900
+    },
+    {
+      "file": "hero-clean.png",
+      "width": 1600,
+      "height": 900,
+      "source": "Actual WebGL canvas pixels; UI and DOM overlays excluded"
+    }
+  ],
+  "errors": [],
+  "ffmpegTool": "Official Playwright ffmpeg v1011, mac-arm64, development recording tool only",
+  "verifiedAt": "2026-11-03",
+  "recordingBrowsersClosed": true
+}

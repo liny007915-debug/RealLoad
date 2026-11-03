@@ -1,0 +1,390 @@
+[
+  {
+    "name": "responsive-1920x1080",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "evidence": {
+      "stage": {
+        "x": 371,
+        "y": 164,
+        "width": 1244,
+        "height": 669.5625
+      },
+      "editor": {
+        "x": 1615,
+        "y": 164,
+        "width": 286,
+        "height": 707.5625
+      },
+      "save": null
+    },
+    "passed": true
+  },
+  {
+    "name": "responsive-1440x900",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "stage": {
+        "x": 371,
+        "y": 164,
+        "width": 764,
+        "height": 489.5625
+      },
+      "editor": {
+        "x": 1135,
+        "y": 164,
+        "width": 286,
+        "height": 527.5625
+      },
+      "save": null
+    },
+    "passed": true
+  },
+  {
+    "name": "responsive-876x672",
+    "viewport": {
+      "width": 876,
+      "height": 672
+    },
+    "evidence": {
+      "stage": {
+        "x": 19,
+        "y": 218,
+        "width": 564,
+        "height": 207.5625
+      },
+      "editor": {
+        "x": 583,
+        "y": 218,
+        "width": 274,
+        "height": 245.5625
+      },
+      "save": null
+    },
+    "passed": true
+  },
+  {
+    "name": "responsive-820x500",
+    "viewport": {
+      "width": 820,
+      "height": 500
+    },
+    "evidence": {
+      "stage": {
+        "x": 19,
+        "y": 179,
+        "width": 508,
+        "height": 200
+      },
+      "editor": {
+        "x": 527,
+        "y": 179,
+        "width": 274,
+        "height": 238
+      },
+      "save": null
+    },
+    "passed": true
+  },
+  {
+    "name": "responsive-390x700",
+    "viewport": {
+      "width": 390,
+      "height": 700
+    },
+    "evidence": {
+      "stage": {
+        "x": 11,
+        "y": -92,
+        "width": 368,
+        "height": 322
+      },
+      "editor": {
+        "x": 11,
+        "y": 270,
+        "width": 368,
+        "height": 660
+      },
+      "save": null
+    },
+    "passed": true
+  },
+  {
+    "name": "responsive-320x568",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "evidence": {
+      "stage": {
+        "x": 11,
+        "y": -43,
+        "width": 298,
+        "height": 270
+      },
+      "editor": {
+        "x": 11,
+        "y": 267,
+        "width": 298,
+        "height": 765.6875
+      },
+      "save": null
+    },
+    "passed": true
+  },
+  {
+    "name": "native-fullscreen-fills-screen",
+    "viewport": {
+      "width": 876,
+      "height": 672
+    },
+    "evidence": {
+      "measured": {
+        "scene": {
+          "x": 0,
+          "y": 0,
+          "width": 876,
+          "height": 672,
+          "top": 0,
+          "right": 876,
+          "bottom": 672,
+          "left": 0
+        },
+        "w": 876,
+        "h": 672,
+        "native": "stage"
+      },
+      "before": {
+        "x": 19,
+        "y": 218,
+        "width": 564,
+        "height": 207.5625
+      },
+      "after": {
+        "x": 0,
+        "y": 0,
+        "width": 876,
+        "height": 672
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "large-door-side-edit-and-smart-round-trip",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "strictUnresolved": [
+        "SIM-ROUTE-REAR#1",
+        "SIM-ROUTE-MIDDLE#1",
+        "SIM-ROUTE-DOOR#1"
+      ],
+      "smartOrder": [
+        "SIM-ROUTE-DOOR#1",
+        "SIM-ROUTE-REAR#1",
+        "SIM-ROUTE-MIDDLE#1"
+      ],
+      "routes": {
+        "SIM-ROUTE-DOOR#1": [
+          {
+            "x": 4700,
+            "y": 0,
+            "z": 0
+          },
+          {
+            "x": 4700,
+            "y": 6,
+            "z": 0
+          },
+          {
+            "x": 6077,
+            "y": 6,
+            "z": 0
+          }
+        ],
+        "SIM-ROUTE-REAR#1": [
+          {
+            "x": 400,
+            "y": 20,
+            "z": 0
+          },
+          {
+            "x": 400,
+            "y": 820,
+            "z": 0
+          },
+          {
+            "x": 6077,
+            "y": 820,
+            "z": 0
+          }
+        ],
+        "SIM-ROUTE-MIDDLE#1": [
+          {
+            "x": 2300,
+            "y": 20,
+            "z": 0
+          },
+          {
+            "x": 6077,
+            "y": 20,
+            "z": 0
+          }
+        ]
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "selected-blocked-cargo-computes-prerequisites",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "removed": [
+        "SIM-ROUTE-DOOR#1",
+        "SIM-ROUTE-REAR#1"
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "live-container-dimensions-and-permanent-door",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "box": {
+        "id": "CUSTOM",
+        "label": "自定义箱体",
+        "L": 6200,
+        "W": 2400,
+        "H": 2500,
+        "doorW": 2200,
+        "doorH": 2200,
+        "payload": 28130,
+        "tare": 2350,
+        "source": "",
+        "verified": "User supplied"
+      },
+      "views": [
+        "iso",
+        "top",
+        "door",
+        "side",
+        "multi"
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "computed-route-is-visible-during-real-animation",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "pausedProgress": "0.2424",
+      "backend": "WebGL2 实时渲染"
+    },
+    "passed": true
+  },
+  {
+    "name": "real-gizmo-drag-labels-and-dimensions",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "before": {
+        "id": "SIM-ROUTE-REAR#1",
+        "skuId": "SIM-ROUTE-REAR",
+        "ordinal": 1,
+        "name": "后方急件异形设备（模拟，非厂家规格）",
+        "kind": "irregular",
+        "weight": 145,
+        "stackLimit": 1,
+        "locked": false,
+        "x": 400,
+        "y": 20,
+        "z": 0,
+        "L": 800,
+        "W": 700,
+        "H": 700,
+        "rotation": 0,
+        "heading": 0,
+        "stackDepth": 1,
+        "cargoSpec": {
+          "version": 1,
+          "L": 800,
+          "W": 700,
+          "H": 700,
+          "weight": 145,
+          "kind": "irregular",
+          "rotate": true,
+          "allowTilt": false,
+          "stackLimit": 1
+        },
+        "groupId": "绕行练习",
+        "orderNo": "SIM-绕行练习",
+        "batchNo": "",
+        "skuCode": "SIM-ROUTE-REAR",
+        "unitCode": "PLAN-绕行练习-SIM-ROUTE-REAR-U-001",
+        "unitCodeSource": "system-planned",
+        "palletNo": "",
+        "destination": "",
+        "priority": "urgent"
+      },
+      "after": {
+        "id": "SIM-ROUTE-REAR#1",
+        "skuId": "SIM-ROUTE-REAR",
+        "ordinal": 1,
+        "name": "后方急件异形设备（模拟，非厂家规格）",
+        "kind": "irregular",
+        "weight": 145,
+        "stackLimit": 1,
+        "locked": false,
+        "x": 550,
+        "y": 20,
+        "z": 0,
+        "L": 800,
+        "W": 700,
+        "H": 700,
+        "rotation": 0,
+        "heading": 0,
+        "stackDepth": 1,
+        "cargoSpec": {
+          "version": 1,
+          "L": 800,
+          "W": 700,
+          "H": 700,
+          "weight": 145,
+          "kind": "irregular",
+          "rotate": true,
+          "allowTilt": false,
+          "stackLimit": 1
+        },
+        "groupId": "绕行练习",
+        "orderNo": "SIM-绕行练习",
+        "batchNo": "",
+        "skuCode": "SIM-ROUTE-REAR",
+        "unitCode": "PLAN-绕行练习-SIM-ROUTE-REAR-U-001",
+        "unitCodeSource": "system-planned",
+        "palletNo": "",
+        "destination": "",
+        "priority": "urgent"
+      },
+      "dimensionLabels": 2
+    },
+    "passed": true
+  }
+]

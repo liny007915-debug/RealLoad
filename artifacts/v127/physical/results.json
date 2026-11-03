@@ -1,0 +1,344 @@
+[
+  {
+    "name": "scene-fullscreen-1920x1080",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "evidence": {
+      "before": {
+        "x": 371,
+        "y": 164,
+        "width": 1530,
+        "height": 669.5625
+      },
+      "after": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 1080
+      },
+      "nativeTarget": "stage",
+      "editedX": 410,
+      "controlsRestored": true
+    },
+    "passed": true
+  },
+  {
+    "name": "scene-fullscreen-1440x900",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "before": {
+        "x": 371,
+        "y": 164,
+        "width": 1050,
+        "height": 489.5625
+      },
+      "after": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      },
+      "nativeTarget": "stage",
+      "editedX": 410,
+      "controlsRestored": true
+    },
+    "passed": true
+  },
+  {
+    "name": "scene-fullscreen-876x672",
+    "viewport": {
+      "width": 876,
+      "height": 672
+    },
+    "evidence": {
+      "before": {
+        "x": 19,
+        "y": 218,
+        "width": 838,
+        "height": 207.5625
+      },
+      "after": {
+        "x": 0,
+        "y": 0,
+        "width": 876,
+        "height": 672
+      },
+      "nativeTarget": "stage",
+      "editedX": 410,
+      "controlsRestored": true
+    },
+    "passed": true
+  },
+  {
+    "name": "scene-fullscreen-820x500",
+    "viewport": {
+      "width": 820,
+      "height": 500
+    },
+    "evidence": {
+      "before": {
+        "x": 19,
+        "y": 179,
+        "width": 782,
+        "height": 200
+      },
+      "after": {
+        "x": 0,
+        "y": 0,
+        "width": 820,
+        "height": 500
+      },
+      "nativeTarget": "stage",
+      "editedX": 410,
+      "controlsRestored": true
+    },
+    "passed": true
+  },
+  {
+    "name": "scene-fullscreen-390x700",
+    "viewport": {
+      "width": 390,
+      "height": 700
+    },
+    "evidence": {
+      "before": {
+        "x": 11,
+        "y": 271,
+        "width": 368,
+        "height": 322
+      },
+      "after": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 700
+      },
+      "nativeTarget": "stage",
+      "editedX": 410,
+      "controlsRestored": true
+    },
+    "passed": true
+  },
+  {
+    "name": "scene-fullscreen-320x568",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "evidence": {
+      "before": {
+        "x": 11,
+        "y": 298,
+        "width": 298,
+        "height": 270
+      },
+      "after": {
+        "x": 0,
+        "y": 0,
+        "width": 320,
+        "height": 568
+      },
+      "nativeTarget": "stage",
+      "editedX": 410,
+      "controlsRestored": true
+    },
+    "passed": true
+  },
+  {
+    "name": "scene-fullscreen-window-fallback",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "windowFallback": true
+    },
+    "passed": true
+  },
+  {
+    "name": "complete-body-opacity-cutaway-and-working-doors",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "images": [
+        {
+          "mode": "hidden",
+          "hash": "abc8856d0773c568d625abc26824b438735c4186b2b5bdb316ec9201eb9ea873"
+        },
+        {
+          "mode": "ghost",
+          "hash": "b69791823bf1349c91b0b55e7ae7cf34d7d1dc4525e861e90c89d868944c0a80"
+        },
+        {
+          "mode": "solid",
+          "hash": "3ac75cc101eb6e5c3dee948de11d865b390d412ba49e366ebba63f7881503706"
+        }
+      ],
+      "closed": "1d7789693b91d425171ef39659feb0fb82d8fe0be77619400600e7f5346f49fa",
+      "opened": "3ac75cc101eb6e5c3dee948de11d865b390d412ba49e366ebba63f7881503706",
+      "cutaway": "e4d66bc5bbe523643a3407cc9a673b2f6bed2dcb2fe686d8f57741096b59b8e5",
+      "liveOpacity": 0.3,
+      "geometryUnchanged": true
+    },
+    "passed": true
+  },
+  {
+    "name": "sixteen-physical-cargo-materials-render-in-webgl",
+    "viewport": {
+      "width": 1100,
+      "height": 850
+    },
+    "evidence": [
+      {
+        "kind": "carton",
+        "parts": 11,
+        "hash": "1777b65fe5e442efca95a54e60f4316f77b55526010e31f896d2a0067a2b03c8",
+        "webgl": true,
+        "surfaceSource": "local-generated-atlas",
+        "distinctColours": 1326
+      },
+      {
+        "kind": "pallet",
+        "parts": 36,
+        "hash": "fbfdc346f5b238281e8f9472344a750176f57f4aa88dd8e45e49db1c9e3392b5",
+        "webgl": true,
+        "surfaceSource": "local-generated-atlas",
+        "distinctColours": 735
+      },
+      {
+        "kind": "drum",
+        "parts": 11,
+        "hash": "637e9bb0551616d23e4c5aa4da915b5f5f2d793420feb392facbf64b9536c95d",
+        "webgl": true,
+        "surfaceSource": "local-generated-atlas",
+        "distinctColours": 438
+      },
+      {
+        "kind": "roll",
+        "parts": 5,
+        "hash": "06f69e368fc28df052978d066ced4f5f12aa9d9ac14fd995bf8515cb399c632b",
+        "webgl": true,
+        "surfaceSource": "local-generated-atlas",
+        "distinctColours": 122
+      },
+      {
+        "kind": "reel",
+        "parts": 29,
+        "hash": "080377d1b9d9f9164cfaf2d4c2f405e62be5bfad9d20532ee16859fc479dc817",
+        "webgl": true,
+        "surfaceSource": "local-generated-atlas",
+        "distinctColours": 751
+      },
+      {
+        "kind": "bag",
+        "parts": 8,
+        "hash": "31f1652051d223db41be2872bde308995f79546a5048a0c27959f682aa3f946b",
+        "webgl": true,
+        "surfaceSource": "local-generated-atlas",
+        "distinctColours": 1080
+      },
+      {
+        "kind": "sack",
+        "parts": 4,
+        "hash": "8888670238c74ce8dffe408e93b99aa72daa6d98a7347b33c8b17b1010b3f81c",
+        "webgl": true,
+        "surfaceSource": "local-generated-atlas",
+        "distinctColours": 815
+      },
+      {
+        "kind": "irregular",
+        "parts": 21,
+        "hash": "28031449a75991794be3d7e18ecc5cdf288834b6d96531dfe581817ec8eb9d0f",
+        "webgl": true,
+        "surfaceSource": "local-generated-atlas",
+        "distinctColours": 26
+      },
+      {
+        "kind": "crate",
+        "parts": 49,
+        "hash": "4c76e722517e33035d555bbbb3daa33295cfea0dd482733698a0823d7e043aea",
+        "webgl": true,
+        "surfaceSource": "local-generated-atlas",
+        "distinctColours": 518
+      },
+      {
+        "kind": "ibc",
+        "parts": 41,
+        "hash": "b3c8902398bd9d3163f4b9bf954048e29d4b91f4150c86b9420de825ea744476",
+        "webgl": true,
+        "surfaceSource": "local-generated-atlas",
+        "distinctColours": 101
+      },
+      {
+        "kind": "machine",
+        "parts": 21,
+        "hash": "aa9614d6adcebd942a1cb251cba68b86afaadda304b2c45ad41e496ba240a595",
+        "webgl": true,
+        "surfaceSource": "local-generated-atlas",
+        "distinctColours": 53
+      },
+      {
+        "kind": "bundle",
+        "parts": 16,
+        "hash": "fed3beca4a2628931ce3e185625841bbcfa6b2a832a415b502942f1684141086",
+        "webgl": true,
+        "surfaceSource": "local-generated-atlas",
+        "distinctColours": 216
+      },
+      {
+        "kind": "plastic_crate",
+        "parts": 38,
+        "hash": "9b7a4cc702cf9a6b1a895bfe86026b97a03e0b7eccd586d9081060b466073424",
+        "webgl": true,
+        "surfaceSource": "local-generated-atlas",
+        "distinctColours": 232
+      },
+      {
+        "kind": "coolbox",
+        "parts": 15,
+        "hash": "021e7a97fa4ff9a81c2899c5ffbadb0175e81aff30220f7f75336c242b7b40c9",
+        "webgl": true,
+        "surfaceSource": "local-generated-atlas",
+        "distinctColours": 35
+      },
+      {
+        "kind": "round_pack",
+        "parts": 6,
+        "hash": "a8dd7ee8e7b244a77cb48d19472544c2014cfc070103d184adfbfbbcadfeb984",
+        "webgl": true,
+        "surfaceSource": "local-generated-atlas",
+        "distinctColours": 146
+      },
+      {
+        "kind": "board",
+        "parts": 17,
+        "hash": "18987d73bc7503121aa7a6a98294bdb0bae1878a932c13e1294b8139e8bc94d0",
+        "webgl": true,
+        "surfaceSource": "local-generated-atlas",
+        "distinctColours": 1210
+      }
+    ],
+    "passed": true
+  },
+  {
+    "name": "local-material-failure-retains-working-procedural-renderer",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "missing": true,
+      "webgl": true,
+      "body": 138,
+      "colours": 831
+    },
+    "passed": true
+  }
+]

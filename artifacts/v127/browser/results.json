@@ -1,0 +1,62 @@
+{
+  "testedAt": "2026-11-03T07:48:28.307Z",
+  "engine": "Installed Chrome, headless",
+  "results": [
+    {
+      "name": "新手教程可重开，试放一件后可编辑",
+      "passed": true
+    },
+    {
+      "name": "示例53件可完成严格门洞装卸规划",
+      "passed": true
+    },
+    {
+      "name": "实际位移、暂停稳定、继续与单步只提交一件",
+      "passed": true
+    },
+    {
+      "name": "53件装入与卸出完整播放，原方案不变",
+      "passed": true
+    },
+    {
+      "name": "卸出单件后可以继续主播放器，不误报剩余受阻",
+      "passed": true
+    },
+    {
+      "name": "播放中重新装柜和切换模块会彻底取消旧动画",
+      "passed": true
+    },
+    {
+      "name": "输入框与按钮的快捷键不会误改场景",
+      "passed": true
+    },
+    {
+      "name": "货物新增、验证、撤销和重做",
+      "passed": true
+    },
+    {
+      "name": "导出JSON与CSV及真实JSON回导",
+      "passed": true
+    },
+    {
+      "name": "CSV模板导入经过映射与确认，不直接覆盖原方案",
+      "passed": true
+    },
+    {
+      "name": "点击编号步骤暂停并回看对应箱件，不再高亮旧动画",
+      "passed": true
+    },
+    {
+      "name": "大订单达到计算上限后仍准确显示未装件数",
+      "passed": true
+    },
+    {
+      "name": "常用工具与更多工具的键盘开合，步骤导航可浏览完整队列",
+      "passed": true
+    },
+    {
+      "name": "手机外观按需展开，标题入口可抵达货物清单",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';
+import {loadImages,writeImage,clearImage,MATERIAL_KINDS,MATERIAL_KEY} from '../src/material-library.mjs';
+import {cargoCorners,pickScreenRect,intersectScreenRect} from '../src/selection.mjs';
+const t=name=>readFileSync(new URL('../'+name,import.meta.url),'utf8');
+class Store{m=new Map;getItem(k){return this.m.get(k)||null}setItem(k,v){this.m.set(k,v)}}
+test('texture register validates class and image MIME; saves locally',()=>{const store=new Store;const pic='data:image/png;base64,YWJj';writeImage('crate',pic,store);assert.equal(loadImages(store).crate,pic);assert.equal(store.m.has(MATERIAL_KEY),true);assert.equal(clearImage('crate',store).crate,undefined);assert.throws(()=>writeImage('fake',pic,store));assert.throws(()=>writeImage('carton','https://example.org/unsafe.png',store))});
+test('known packaging and structural material kinds all available',()=>{assert.ok(MATERIAL_KINDS.length>=10);for(const kind of ['carton','board','pallet','crate','metal','plastic','jute','drum','roll'])assert.ok(MATERIAL_KINDS.includes(kind));});
+test('marquee selects units whose screen envelopes intersect',()=>{const p=[{id:'A',x:0,y:0,z:0,L:1000,W:500,H:500},{id:'B',x:2000,y:0,z:0,L:500,W:500,H:500}];const fn=([x,y,z])=>({x:x*100,y:z*100-y*70});const hit=pickScreenRect(p,fn,{x1:50,y1:-60,x2:150,y2:60});assert.deepEqual(hit,['A']);assert.equal(cargoCorners(p[0]).length,8);assert.equal(intersectScreenRect([{x:0,y:0},{x:10,y:10}],{x1:12,x2:20,y1:12,y2:20}),false)});
+test('UI contains entry to material editor and marquee in free studio',()=>{const html=t('index.html'),js=t('src/app.mjs'),webgl=t('src/webgl.mjs'),css=t('src/v13.css');for(const id of ['material-dialog','material-choices','material-file','open-material-shortcut','material-reset'])assert.ok(html.includes(`id="${id}"`),id);assert.ok(js.includes('setupMaterialDialog'));assert.ok(js.includes('selectMany:'));assert.ok(webgl.includes('pickScreenRect'));assert.ok(css.includes('.selection-marquee'))});
+test('material photo textures do not alter physical packing or imported values',()=>{const webgl=t('src/webgl.mjs');assert.ok(webgl.includes('texture(g,kind,image)'));assert.ok(!t('src/engine.mjs').includes('material-library'));assert.ok(!t('src/importer.mjs').includes('material-library'));});
+
+import {cargoZone} from '../src/location.mjs';
+test('door location is X=L (not X=0)',()=>{const box={L:6000,W:2400,H:2400};assert.ok(cargoZone({x:5600,L:400,y:0,W:400,z:0,H:300},box).includes('柜门侧'));assert.ok(cargoZone({x:0,L:400,y:0,W:400,z:0,H:300},box).includes('柜头'))});

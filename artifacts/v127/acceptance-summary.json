@@ -1,0 +1,97 @@
+{
+  "version": "1.27.0-beta.1",
+  "verifiedAt": "2026-11-03T08:05:10.966435+00:00",
+  "browserCases": 148,
+  "suites": [
+    {
+      "name": "retention",
+      "passed": 18,
+      "total": 18,
+      "report": "retention/results.json"
+    },
+    {
+      "name": "free",
+      "passed": 18,
+      "total": 18,
+      "report": "free-movement/results.json"
+    },
+    {
+      "name": "new",
+      "passed": 14,
+      "total": 14,
+      "report": "new/results.json"
+    },
+    {
+      "name": "v123",
+      "passed": 12,
+      "total": 12,
+      "report": "v123/results.json"
+    },
+    {
+      "name": "editing",
+      "passed": 13,
+      "total": 13,
+      "report": "editing/results.json"
+    },
+    {
+      "name": "physical",
+      "passed": 10,
+      "total": 10,
+      "report": "physical/results.json"
+    },
+    {
+      "name": "studio",
+      "passed": 12,
+      "total": 12,
+      "report": "studio/results.json"
+    },
+    {
+      "name": "experience",
+      "passed": 11,
+      "total": 11,
+      "report": "experience/results.json"
+    },
+    {
+      "name": "browser",
+      "passed": 14,
+      "total": 14,
+      "report": "browser/results.json"
+    },
+    {
+      "name": "layout",
+      "passed": 6,
+      "total": 6,
+      "report": "layout/results.json"
+    },
+    {
+      "name": "render",
+      "passed": 7,
+      "total": 7,
+      "report": "render/render-browser-results.json"
+    },
+    {
+      "name": "beta",
+      "passed": 13,
+      "total": 13,
+      "report": "beta/results.json"
+    }
+  ],
+  "visibleTextStates": 92,
+  "visibleTextFailures": 0,
+  "unitTests": 488,
+  "unitPassed": 488,
+  "unitFailed": 0,
+  "packagingKinds": 16,
+  "mixedSpecFixtureUnits": 18,
+  "seededScenarios": 24,
+  "seededCargoUnits": 768,
+  "staticDesignRawFindings": 84,
+  "staticDesignConfiguredFindings": 0,
+  "newDesignIgnores": 0,
+  "source": "Real isolated browser workflows and Node test output",
+  "limits": [
+    "Chrome software WebGL2 and synthesized touch; no physical mobile, Safari or Windows native coverage.",
+    "Computed CSS contrast checks settled visible text, not complete WCAG certification.",
+    "Heuristic placement and fixed-orientation envelope routes do not prove a globally optimal or physically executable handling plan."
+  ]
+}

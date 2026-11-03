@@ -1,0 +1,730 @@
+[
+  {
+    "name": "upper-carton-direct-drag-drops-to-floor",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "before": {
+        "id": "SIM-FREE-A#3",
+        "skuId": "SIM-FREE-A",
+        "name": "可堆码纸箱（模拟尺寸与毛重）",
+        "kind": "carton",
+        "L": 400,
+        "W": 400,
+        "H": 400,
+        "weight": 20,
+        "stackLimit": 4,
+        "locked": false,
+        "heading": 0,
+        "x": 500,
+        "y": 500,
+        "z": 800,
+        "stackDepth": 3,
+        "groupId": "自由摆放练习",
+        "orderNo": "",
+        "batchNo": "",
+        "skuCode": "SIM-FREE-A",
+        "unitCode": "PLAN-自由摆放练习-SIM-FREE-A-C-003",
+        "unitCodeSource": "system-planned",
+        "palletNo": "",
+        "destination": "",
+        "priority": "normal",
+        "cargoSpec": {
+          "version": 1,
+          "L": 400,
+          "W": 400,
+          "H": 400,
+          "weight": 20,
+          "kind": "carton",
+          "rotate": true,
+          "allowTilt": false,
+          "stackLimit": 4
+        }
+      },
+      "after": {
+        "id": "SIM-FREE-A#3",
+        "skuId": "SIM-FREE-A",
+        "name": "可堆码纸箱（模拟尺寸与毛重）",
+        "kind": "carton",
+        "L": 400,
+        "W": 400,
+        "H": 400,
+        "weight": 20,
+        "stackLimit": 4,
+        "locked": false,
+        "heading": 0,
+        "x": 1700,
+        "y": 500,
+        "z": 0,
+        "stackDepth": 1,
+        "groupId": "自由摆放练习",
+        "orderNo": "",
+        "batchNo": "",
+        "skuCode": "SIM-FREE-A",
+        "unitCode": "PLAN-自由摆放练习-SIM-FREE-A-C-003",
+        "unitCodeSource": "system-planned",
+        "palletNo": "",
+        "destination": "",
+        "priority": "normal",
+        "cargoSpec": {
+          "version": 1,
+          "L": 400,
+          "W": 400,
+          "H": 400,
+          "weight": 20,
+          "kind": "carton",
+          "rotate": true,
+          "allowTilt": false,
+          "stackLimit": 4
+        }
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "direct-drag-stacks-on-complete-support",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "id": "SIM-FREE-A#4",
+      "skuId": "SIM-FREE-A",
+      "name": "可堆码纸箱（模拟尺寸与毛重）",
+      "kind": "carton",
+      "L": 400,
+      "W": 400,
+      "H": 400,
+      "weight": 20,
+      "stackLimit": 4,
+      "locked": false,
+      "heading": 0,
+      "x": 500,
+      "y": 500,
+      "z": 1200,
+      "stackDepth": 4,
+      "groupId": "自由摆放练习",
+      "orderNo": "",
+      "batchNo": "",
+      "skuCode": "SIM-FREE-A",
+      "unitCode": "PLAN-自由摆放练习-SIM-FREE-A-C-004",
+      "unitCodeSource": "system-planned",
+      "palletNo": "",
+      "destination": "",
+      "priority": "normal",
+      "cargoSpec": {
+        "version": 1,
+        "L": 400,
+        "W": 400,
+        "H": 400,
+        "weight": 20,
+        "kind": "carton",
+        "rotate": true,
+        "allowTilt": false,
+        "stackLimit": 4
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "whole-stack-linkage-preserves-relative-positions",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": [
+      {
+        "id": "SIM-FREE-A#1",
+        "skuId": "SIM-FREE-A",
+        "name": "可堆码纸箱（模拟尺寸与毛重）",
+        "kind": "carton",
+        "L": 400,
+        "W": 400,
+        "H": 400,
+        "weight": 20,
+        "stackLimit": 4,
+        "locked": false,
+        "heading": 0,
+        "x": 1413.96,
+        "y": 500,
+        "z": 0,
+        "stackDepth": 1,
+        "groupId": "自由摆放练习",
+        "orderNo": "",
+        "batchNo": "",
+        "skuCode": "SIM-FREE-A",
+        "unitCode": "PLAN-自由摆放练习-SIM-FREE-A-C-001",
+        "unitCodeSource": "system-planned",
+        "palletNo": "",
+        "destination": "",
+        "priority": "normal",
+        "cargoSpec": {
+          "version": 1,
+          "L": 400,
+          "W": 400,
+          "H": 400,
+          "weight": 20,
+          "kind": "carton",
+          "rotate": true,
+          "allowTilt": false,
+          "stackLimit": 4
+        }
+      },
+      {
+        "id": "SIM-FREE-A#2",
+        "skuId": "SIM-FREE-A",
+        "name": "可堆码纸箱（模拟尺寸与毛重）",
+        "kind": "carton",
+        "L": 400,
+        "W": 400,
+        "H": 400,
+        "weight": 20,
+        "stackLimit": 4,
+        "locked": false,
+        "heading": 0,
+        "x": 1413.96,
+        "y": 500,
+        "z": 400,
+        "stackDepth": 2,
+        "groupId": "自由摆放练习",
+        "orderNo": "",
+        "batchNo": "",
+        "skuCode": "SIM-FREE-A",
+        "unitCode": "PLAN-自由摆放练习-SIM-FREE-A-C-002",
+        "unitCodeSource": "system-planned",
+        "palletNo": "",
+        "destination": "",
+        "priority": "normal",
+        "cargoSpec": {
+          "version": 1,
+          "L": 400,
+          "W": 400,
+          "H": 400,
+          "weight": 20,
+          "kind": "carton",
+          "rotate": true,
+          "allowTilt": false,
+          "stackLimit": 4
+        }
+      },
+      {
+        "id": "SIM-FREE-A#3",
+        "skuId": "SIM-FREE-A",
+        "name": "可堆码纸箱（模拟尺寸与毛重）",
+        "kind": "carton",
+        "L": 400,
+        "W": 400,
+        "H": 400,
+        "weight": 20,
+        "stackLimit": 4,
+        "locked": false,
+        "heading": 0,
+        "x": 1413.96,
+        "y": 500,
+        "z": 800,
+        "stackDepth": 3,
+        "groupId": "自由摆放练习",
+        "orderNo": "",
+        "batchNo": "",
+        "skuCode": "SIM-FREE-A",
+        "unitCode": "PLAN-自由摆放练习-SIM-FREE-A-C-003",
+        "unitCodeSource": "system-planned",
+        "palletNo": "",
+        "destination": "",
+        "priority": "normal",
+        "cargoSpec": {
+          "version": 1,
+          "L": 400,
+          "W": 400,
+          "H": 400,
+          "weight": 20,
+          "kind": "carton",
+          "rotate": true,
+          "allowTilt": false,
+          "stackLimit": 4
+        }
+      }
+    ],
+    "passed": true
+  },
+  {
+    "name": "draft-follows-pointer-through-overlap-and-preserves-applied-plan",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "draft": {
+        "SIM-FREE-A#4": {
+          "x": 600,
+          "y": 550
+        }
+      },
+      "issues": [
+        {
+          "id": "SIM-FREE-A#1",
+          "kind": "collision",
+          "text": "SIM-FREE-A#1 与 SIM-FREE-A#4 发生几何重叠"
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "draft-z-height-reload-apply-and-undo",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "appliedX": 2200,
+      "recoveredDraft": {
+        "SIM-FREE-A#4": {
+          "x": 2200
+        }
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "draft-z-handle-lifts-and-cancel-restores",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "SIM-FREE-A#4": {
+        "z": 546.82
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "draft-export-and-playback-use-applied-plan",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "exportUsesApplied": true,
+      "draftPreserved": {
+        "SIM-FREE-A#4": {
+          "x": 600,
+          "y": 550,
+          "z": 200
+        }
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "entry-from-observe-and-playback-resets-to-move",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "id": "SIM-FREE-IR#1",
+      "skuId": "SIM-FREE-IR",
+      "name": "异形设备（模拟外包络与毛重）",
+      "kind": "irregular",
+      "L": 800,
+      "W": 700,
+      "H": 700,
+      "weight": 145,
+      "stackLimit": 1,
+      "locked": false,
+      "heading": 0,
+      "x": 3500,
+      "y": 600,
+      "z": 0,
+      "stackDepth": 1,
+      "groupId": "自由摆放练习",
+      "orderNo": "",
+      "batchNo": "",
+      "skuCode": "SIM-FREE-IR",
+      "unitCode": "PLAN-自由摆放练习-SIM-FREE-IR-U-001",
+      "unitCodeSource": "system-planned",
+      "palletNo": "",
+      "destination": "",
+      "priority": "normal",
+      "cargoSpec": {
+        "version": 1,
+        "L": 800,
+        "W": 700,
+        "H": 700,
+        "weight": 145,
+        "kind": "irregular",
+        "rotate": true,
+        "allowTilt": false,
+        "stackLimit": 1
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "responsive-controls-and-fullscreen-876x672",
+    "viewport": {
+      "width": 876,
+      "height": 672
+    },
+    "evidence": {
+      "bounds": {
+        "bar": {
+          "bottom": 323
+        },
+        "stage": {
+          "top": 331
+        }
+      },
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 876,
+        "height": 672
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "responsive-controls-and-fullscreen-390x700",
+    "viewport": {
+      "width": 390,
+      "height": 700
+    },
+    "evidence": {
+      "bounds": {
+        "bar": {
+          "bottom": 426
+        },
+        "stage": {
+          "top": 435
+        }
+      },
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 700
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "responsive-controls-and-fullscreen-1440x520",
+    "viewport": {
+      "width": 1440,
+      "height": 520
+    },
+    "evidence": {
+      "bounds": {
+        "bar": {
+          "bottom": 205
+        },
+        "stage": {
+          "top": 213
+        }
+      },
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 520
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "touch-direct-draft-drag",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "evidence": {
+      "SIM-FREE-IR#1": {
+        "x": 3600
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "blocked-automatic-drop-shows-target-then-restores",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "requested": 500,
+      "restored": 3000
+    },
+    "passed": true
+  },
+  {
+    "name": "unlinked-support-explains-why-it-cannot-drop",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "supportProtected": true
+    },
+    "passed": true
+  },
+  {
+    "name": "interrupted-and-foreign-pointer-gestures",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "cancelRestores": true,
+      "blurRestores": true,
+      "foreignPointerIgnored": true
+    },
+    "passed": true
+  },
+  {
+    "name": "draft-xyz-is-shared-by-all-four-views",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "draft": {
+        "id": "SIM-FREE-IR#1",
+        "skuId": "SIM-FREE-IR",
+        "name": "异形设备（模拟外包络与毛重）",
+        "kind": "irregular",
+        "L": 800,
+        "W": 700,
+        "H": 700,
+        "weight": 145,
+        "stackLimit": 1,
+        "locked": false,
+        "heading": 0,
+        "x": 3000,
+        "y": 500,
+        "z": 300,
+        "stackDepth": 1,
+        "groupId": "自由摆放练习",
+        "orderNo": "",
+        "batchNo": "",
+        "skuCode": "SIM-FREE-IR",
+        "unitCode": "PLAN-自由摆放练习-SIM-FREE-IR-U-001",
+        "unitCodeSource": "system-planned",
+        "palletNo": "",
+        "destination": "",
+        "priority": "normal",
+        "cargoSpec": {
+          "version": 1,
+          "L": 800,
+          "W": 700,
+          "H": 700,
+          "weight": 145,
+          "kind": "irregular",
+          "rotate": true,
+          "allowTilt": false,
+          "stackLimit": 1
+        }
+      },
+      "four": [
+        {
+          "mode": "iso",
+          "position": {
+            "id": "SIM-FREE-IR#1",
+            "skuId": "SIM-FREE-IR",
+            "name": "异形设备（模拟外包络与毛重）",
+            "kind": "irregular",
+            "L": 800,
+            "W": 700,
+            "H": 700,
+            "weight": 145,
+            "stackLimit": 1,
+            "locked": false,
+            "heading": 0,
+            "x": 3000,
+            "y": 500,
+            "z": 300,
+            "stackDepth": 1,
+            "groupId": "自由摆放练习",
+            "orderNo": "",
+            "batchNo": "",
+            "skuCode": "SIM-FREE-IR",
+            "unitCode": "PLAN-自由摆放练习-SIM-FREE-IR-U-001",
+            "unitCodeSource": "system-planned",
+            "palletNo": "",
+            "destination": "",
+            "priority": "normal",
+            "cargoSpec": {
+              "version": 1,
+              "L": 800,
+              "W": 700,
+              "H": 700,
+              "weight": 145,
+              "kind": "irregular",
+              "rotate": true,
+              "allowTilt": false,
+              "stackLimit": 1
+            }
+          }
+        },
+        {
+          "mode": "top",
+          "position": {
+            "id": "SIM-FREE-IR#1",
+            "skuId": "SIM-FREE-IR",
+            "name": "异形设备（模拟外包络与毛重）",
+            "kind": "irregular",
+            "L": 800,
+            "W": 700,
+            "H": 700,
+            "weight": 145,
+            "stackLimit": 1,
+            "locked": false,
+            "heading": 0,
+            "x": 3000,
+            "y": 500,
+            "z": 300,
+            "stackDepth": 1,
+            "groupId": "自由摆放练习",
+            "orderNo": "",
+            "batchNo": "",
+            "skuCode": "SIM-FREE-IR",
+            "unitCode": "PLAN-自由摆放练习-SIM-FREE-IR-U-001",
+            "unitCodeSource": "system-planned",
+            "palletNo": "",
+            "destination": "",
+            "priority": "normal",
+            "cargoSpec": {
+              "version": 1,
+              "L": 800,
+              "W": 700,
+              "H": 700,
+              "weight": 145,
+              "kind": "irregular",
+              "rotate": true,
+              "allowTilt": false,
+              "stackLimit": 1
+            }
+          }
+        },
+        {
+          "mode": "door",
+          "position": {
+            "id": "SIM-FREE-IR#1",
+            "skuId": "SIM-FREE-IR",
+            "name": "异形设备（模拟外包络与毛重）",
+            "kind": "irregular",
+            "L": 800,
+            "W": 700,
+            "H": 700,
+            "weight": 145,
+            "stackLimit": 1,
+            "locked": false,
+            "heading": 0,
+            "x": 3000,
+            "y": 500,
+            "z": 300,
+            "stackDepth": 1,
+            "groupId": "自由摆放练习",
+            "orderNo": "",
+            "batchNo": "",
+            "skuCode": "SIM-FREE-IR",
+            "unitCode": "PLAN-自由摆放练习-SIM-FREE-IR-U-001",
+            "unitCodeSource": "system-planned",
+            "palletNo": "",
+            "destination": "",
+            "priority": "normal",
+            "cargoSpec": {
+              "version": 1,
+              "L": 800,
+              "W": 700,
+              "H": 700,
+              "weight": 145,
+              "kind": "irregular",
+              "rotate": true,
+              "allowTilt": false,
+              "stackLimit": 1
+            }
+          }
+        },
+        {
+          "mode": "side",
+          "position": {
+            "id": "SIM-FREE-IR#1",
+            "skuId": "SIM-FREE-IR",
+            "name": "异形设备（模拟外包络与毛重）",
+            "kind": "irregular",
+            "L": 800,
+            "W": 700,
+            "H": 700,
+            "weight": 145,
+            "stackLimit": 1,
+            "locked": false,
+            "heading": 0,
+            "x": 3000,
+            "y": 500,
+            "z": 300,
+            "stackDepth": 1,
+            "groupId": "自由摆放练习",
+            "orderNo": "",
+            "batchNo": "",
+            "skuCode": "SIM-FREE-IR",
+            "unitCode": "PLAN-自由摆放练习-SIM-FREE-IR-U-001",
+            "unitCodeSource": "system-planned",
+            "palletNo": "",
+            "destination": "",
+            "priority": "normal",
+            "cargoSpec": {
+              "version": 1,
+              "L": 800,
+              "W": 700,
+              "H": 700,
+              "weight": 145,
+              "kind": "irregular",
+              "rotate": true,
+              "allowTilt": false,
+              "stackLimit": 1
+            }
+          }
+        }
+      ]
+    },
+    "passed": true
+  },
+  {
+    "name": "keyboard-movement-preserves-drafts-and-links-automatic-stack",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "draftKeyboardPreserved": true,
+      "automaticWholeStackMoved": 3
+    },
+    "passed": true
+  },
+  {
+    "name": "default-53-cargo-upper-box-really-moves",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "id": "SKU-001#33",
+      "before": [
+        3600,
+        706,
+        760
+      ],
+      "after": [
+        5100,
+        6,
+        760
+      ]
+    },
+    "passed": true
+  }
+]

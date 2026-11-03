@@ -1,0 +1,728 @@
+{
+  "createdAt": "2026-11-03T07:49:05.934Z",
+  "baseUrl": "http://localhost:4266",
+  "engine": "Chromium",
+  "touchInput": "CDP synthesized touch, no physical device coverage",
+  "results": [
+    {
+      "viewport": [
+        320,
+        568
+      ],
+      "errors": [],
+      "packed": {
+        "count": "53 / 53",
+        "steps": 53,
+        "overflow": 0
+      },
+      "layout": {
+        "stage": {
+          "x": 11,
+          "y": 271,
+          "width": 298,
+          "height": 270,
+          "top": 271,
+          "right": 309,
+          "bottom": 541,
+          "left": 11
+        },
+        "player": {
+          "x": 101,
+          "y": 680,
+          "width": 119,
+          "height": 36,
+          "top": 680,
+          "right": 220,
+          "bottom": 716,
+          "left": 101
+        },
+        "steps": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "columns": "flex"
+      },
+      "scrollBefore": 0,
+      "scrollAfter": {
+        "y": 154,
+        "touchAction": "pan-y"
+      },
+      "library": {
+        "x": 12,
+        "y": 14,
+        "width": 296,
+        "height": 540
+      },
+      "cargoDialog": {
+        "x": 16,
+        "y": 12,
+        "width": 288,
+        "height": 544
+      },
+      "importDialog": {
+        "x": 16,
+        "y": 17.046875,
+        "width": 288,
+        "height": 533.90625
+      },
+      "fullscreenLibrary": {
+        "x": 12,
+        "y": 14,
+        "width": 296,
+        "height": 540
+      },
+      "passed": true
+    },
+    {
+      "viewport": [
+        390,
+        600
+      ],
+      "errors": [],
+      "packed": {
+        "count": "53 / 53",
+        "steps": 53,
+        "overflow": 0
+      },
+      "layout": {
+        "stage": {
+          "x": 11,
+          "y": 271,
+          "width": 368,
+          "height": 276,
+          "top": 271,
+          "right": 379,
+          "bottom": 547,
+          "left": 11
+        },
+        "player": {
+          "x": 101,
+          "y": 686,
+          "width": 112,
+          "height": 36,
+          "top": 686,
+          "right": 213,
+          "bottom": 722,
+          "left": 101
+        },
+        "steps": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "columns": "flex"
+      },
+      "scrollBefore": 0,
+      "scrollAfter": {
+        "y": 154,
+        "touchAction": "pan-y"
+      },
+      "library": {
+        "x": 12,
+        "y": 14,
+        "width": 366,
+        "height": 572
+      },
+      "cargoDialog": {
+        "x": 16,
+        "y": 12,
+        "width": 358,
+        "height": 576
+      },
+      "importDialog": {
+        "x": 16,
+        "y": 18,
+        "width": 358,
+        "height": 564
+      },
+      "fullscreenLibrary": {
+        "x": 12,
+        "y": 14,
+        "width": 366,
+        "height": 572
+      },
+      "passed": true
+    },
+    {
+      "viewport": [
+        820,
+        500
+      ],
+      "errors": [],
+      "packed": {
+        "count": "53 / 53",
+        "steps": 53,
+        "overflow": 0
+      },
+      "layout": {
+        "stage": {
+          "x": 19,
+          "y": 179,
+          "width": 782,
+          "height": 200,
+          "top": 179,
+          "right": 801,
+          "bottom": 379,
+          "left": 19
+        },
+        "player": {
+          "x": 535,
+          "y": 424,
+          "width": 112,
+          "height": 32,
+          "top": 424,
+          "right": 647,
+          "bottom": 456,
+          "left": 535
+        },
+        "steps": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "columns": "grid"
+      },
+      "scrollBefore": 0,
+      "scrollAfter": {
+        "y": 0,
+        "touchAction": "pan-y"
+      },
+      "library": {
+        "x": 150,
+        "y": 14,
+        "width": 520,
+        "height": 472
+      },
+      "cargoDialog": {
+        "x": 140,
+        "y": 25,
+        "width": 540,
+        "height": 450
+      },
+      "importDialog": {
+        "x": 16,
+        "y": 30,
+        "width": 788,
+        "height": 440
+      },
+      "fullscreenLibrary": {
+        "x": 150,
+        "y": 14,
+        "width": 520,
+        "height": 472
+      },
+      "passed": true
+    },
+    {
+      "viewport": [
+        1366,
+        720
+      ],
+      "errors": [],
+      "packed": {
+        "count": "53 / 53",
+        "steps": 53,
+        "overflow": 0
+      },
+      "layout": {
+        "stage": {
+          "x": 371,
+          "y": 174,
+          "width": 976,
+          "height": 299.5625,
+          "top": 174,
+          "right": 1347,
+          "bottom": 473.5625,
+          "left": 371
+        },
+        "player": {
+          "x": 1079,
+          "y": 524.5625,
+          "width": 112,
+          "height": 32,
+          "top": 524.5625,
+          "right": 1191,
+          "bottom": 556.5625,
+          "left": 1079
+        },
+        "steps": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "columns": "grid"
+      },
+      "scrollBefore": 0,
+      "scrollAfter": {
+        "y": 0,
+        "touchAction": "pan-y"
+      },
+      "library": {
+        "x": 72,
+        "y": 60,
+        "width": 280,
+        "height": 660
+      },
+      "cargoDialog": {
+        "x": 413,
+        "y": 36,
+        "width": 540,
+        "height": 648
+      },
+      "importDialog": {
+        "x": 223,
+        "y": 71.75,
+        "width": 920,
+        "height": 576.5
+      },
+      "fullscreenLibrary": {
+        "x": 423,
+        "y": 14,
+        "width": 520,
+        "height": 692
+      },
+      "passed": true
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "errors": [],
+      "packed": {
+        "count": "53 / 53",
+        "steps": 53,
+        "overflow": 0
+      },
+      "layout": {
+        "stage": {
+          "x": 371,
+          "y": 164,
+          "width": 1050,
+          "height": 489.5625,
+          "top": 164,
+          "right": 1421,
+          "bottom": 653.5625,
+          "left": 371
+        },
+        "player": {
+          "x": 1153,
+          "y": 704.5625,
+          "width": 112,
+          "height": 32,
+          "top": 704.5625,
+          "right": 1265,
+          "bottom": 736.5625,
+          "left": 1153
+        },
+        "steps": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "columns": "grid"
+      },
+      "scrollBefore": 0,
+      "scrollAfter": {
+        "y": 0,
+        "touchAction": "pan-y"
+      },
+      "library": {
+        "x": 72,
+        "y": 60,
+        "width": 280,
+        "height": 840
+      },
+      "cargoDialog": {
+        "x": 450,
+        "y": 45,
+        "width": 540,
+        "height": 810
+      },
+      "importDialog": {
+        "x": 260,
+        "y": 161.75,
+        "width": 920,
+        "height": 576.5
+      },
+      "fullscreenLibrary": {
+        "x": 460,
+        "y": 14,
+        "width": 520,
+        "height": 872
+      },
+      "passed": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "errors": [],
+      "packed": {
+        "count": "53 / 53",
+        "steps": 53,
+        "overflow": 0
+      },
+      "layout": {
+        "stage": {
+          "x": 371,
+          "y": 164,
+          "width": 1530,
+          "height": 669.5625,
+          "top": 164,
+          "right": 1901,
+          "bottom": 833.5625,
+          "left": 371
+        },
+        "player": {
+          "x": 1633,
+          "y": 884.5625,
+          "width": 112,
+          "height": 32,
+          "top": 884.5625,
+          "right": 1745,
+          "bottom": 916.5625,
+          "left": 1633
+        },
+        "steps": [
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64,
+          64
+        ],
+        "columns": "grid"
+      },
+      "scrollBefore": 0,
+      "scrollAfter": {
+        "y": 0,
+        "touchAction": "pan-y"
+      },
+      "library": {
+        "x": 72,
+        "y": 60,
+        "width": 280,
+        "height": 1020
+      },
+      "cargoDialog": {
+        "x": 690,
+        "y": 54,
+        "width": 540,
+        "height": 972
+      },
+      "importDialog": {
+        "x": 500,
+        "y": 251.75,
+        "width": 920,
+        "height": 576.5
+      },
+      "fullscreenLibrary": {
+        "x": 700,
+        "y": 14,
+        "width": 520,
+        "height": 1052
+      },
+      "passed": true
+    }
+  ]
+}

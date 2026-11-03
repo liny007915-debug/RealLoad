@@ -1,0 +1,55 @@
+/* V1.12. Task-first fullscreen editor, explicit shell visibility, spring feedback. */
+:root{--v112-radius:14px;--v112-radius-card:20px;--v112-shadow:0 12px 38px rgba(45,33,54,.14)}
+/* Do not clip the lower scene on short displays. The workspace itself can scroll. */
+.layout{min-height:0}
+.workspace{overflow-y:auto;overflow-x:hidden;min-height:0;overscroll-behavior:contain;scrollbar-gutter:stable}
+.viewport-shell{flex:0 0 auto;min-height:clamp(440px,67vh,920px);display:flex;flex-direction:column;min-width:0}
+.viewport-shell .stage{flex:1 1 auto;min-height:330px;position:relative;overflow:hidden}
+.stage-canvases{position:absolute;inset:0;min-width:0;min-height:0}
+.workspace-footer,.bottom-note{flex-shrink:0}
+#library-free{min-height:0;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;padding-bottom:30px}
+#library-free .free-studio-controls,#library-free .free-palette-area{flex-shrink:0}
+#library-free .free-loaded-list{max-height:none;min-height:160px;overflow:visible}
+#library-free .free-loaded-area{flex-shrink:0}
+.v112-fullscreen .viewport-shell{position:fixed;inset:9px;z-index:2100;min-height:0;height:calc(100dvh - 18px);max-height:calc(100dvh - 18px);box-shadow:0 25px 80px #1d163159;border-radius:22px;background:#fff;overflow:hidden}
+.v112-fullscreen .viewport-shell .stage{min-height:0;flex:1 1 auto}
+.v112-fullscreen .viewport-toolbar{flex:0 0 auto;min-height:54px;overflow-x:auto;overflow-y:hidden}
+.v112-fullscreen .workspace{overflow:hidden}
+.v112-fullscreen .viewport-shell .stage-canvases{inset:0}
+.v112-fullscreen .scene-guidance{display:block;max-width:70%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.v112-fullscreen #library{z-index:100!important}
+.v112-fullscreen.v112-list-open #library{position:fixed!important;top:74px!important;left:18px!important;bottom:22px!important;width:min(348px,85vw)!important;z-index:2201!important;transform:none!important;opacity:1!important;pointer-events:auto!important;box-shadow:var(--v112-shadow);border-radius:18px;overflow:auto}
+.v112-fullscreen.v112-list-open #library .library-top{display:flex}
+.v112-fullscreen #library-free{height:100%;overflow:auto}
+.v112-fullscreen .viewport-shell .viewport-tabs{flex-shrink:0}
+.v112-scenetools{position:absolute;left:15px;top:113px;z-index:14;display:flex;gap:7px}
+.v112-scenetools button{font-size:11px;font-weight:700;min-height:33px;border-radius:12px;border:1px solid #e0dbe7;background:rgba(255,253,251,.94);backdrop-filter:blur(12px);padding:6px 11px;color:#4e4667;box-shadow:0 4px 14px #22192f12}
+.v112-scenetools button[aria-pressed=true]{background:#382f4b;color:white;border-color:#382f4b}
+#v112-open-list{display:none}.v112-fullscreen #v112-open-list{display:block}
+#editor-fullscreen{border-radius:12px;min-width:55px;white-space:nowrap;background:linear-gradient(125deg,#efebfb,#fff5ed);border-color:#e3dced;color:#564a85;font-weight:700}
+#editor-fullscreen[aria-pressed=true]{background:linear-gradient(120deg,#594782,#8e719f);color:white;border-color:#594782}
+#move-feedback{z-index:15;border-radius:12px;box-shadow:0 6px 20px #261d3525;max-width:min(460px,80vw)}
+#move-feedback.v112-magnet{background:#f8f4ff!important;border:1px solid #b2a1dc;color:#534184!important}
+.v112-unload-order{font-size:10px;color:#655975;border:1px dashed #ded2f0;border-radius:10px;padding:6px 9px;background:#faf7ff}
+.v112-order-listno{font:700 11px/1.2 inherit;display:inline-grid;place-items:center;font-style:normal;margin-right:9px;min-width:24px;height:24px;background:linear-gradient(125deg,#6658b0,#9a78b6);border-radius:8px;color:white}
+.v112-order-badge{position:absolute;transform:translate(-50%,-50%);display:grid;place-items:center;min-width:25px;height:25px;padding:0 5px;font-size:11px;font-weight:800;border:2px solid #fff;color:#fff;background:linear-gradient(135deg,#6256b2,#9871b5);border-radius:8px;box-shadow:0 3px 12px #32265366;cursor:pointer;pointer-events:auto;z-index:8}
+.v112-order-badge.blocked{background:#b58162;opacity:.87}
+.v112-order-badge:hover{transform:translate(-50%,-50%) scale(1.18);z-index:9}
+/* Consistent corner radii and physically responsive, but subtle, button motion. */
+.rail-item,.view-tool,.scene-round,.preset-btn,.pointer-tool,.unload-item button,.unload-hud-actions button,.free-action-bar button,.free-quick-actions button,.free-segment button{border-radius:var(--v112-radius)!important}
+button:not(:disabled){transition:transform .30s cubic-bezier(.18,1.48,.38,1),box-shadow .24s ease,background-color .2s ease,border-color .2s ease,filter .24s ease}
+button:not(:disabled):hover{filter:brightness(1.025);transform:translateY(-1.5px)}
+button:not(:disabled):active{transform:translateY(1px) scale(.95);filter:brightness(.98);transition-duration:.12s}
+.v112-order-badge:not(:disabled):hover{transform:translate(-50%,-50%) scale(1.15)}
+.v112-order-badge:not(:disabled):active{transform:translate(-50%,-50%) scale(.93)}
+.v112-fullscreen .viewport-shell .view-cell canvas{cursor:grab}
+.v112-fullscreen .viewport-shell[data-pointer-tool=select] .view-cell canvas{cursor:move}
+@media(max-width:1050px){.viewport-shell{min-height:clamp(460px,70vh,850px)}.v112-scenetools{top:101px}}
+@media(max-width:740px){.workspace{padding-bottom:14px}.viewport-shell{min-height:clamp(480px,74vh,820px)}.viewport-shell .stage{min-height:360px}.v112-scenetools{top:86px;left:8px;gap:4px}.v112-scenetools button{font-size:10px;padding:6px 8px}.v112-fullscreen .viewport-shell{inset:0;border-radius:0;height:100dvh;max-height:100dvh}.v112-fullscreen .viewport-toolbar{min-height:58px}.v112-fullscreen .viewport-shell .stage{min-height:0}.v112-fullscreen.v112-list-open #library{top:62px!important;left:8px!important;bottom:10px!important}.v112-fullscreen .scene-guidance{display:none}}
+@media(prefers-reduced-motion:reduce){button:not(:disabled),.v112-order-badge{animation:none!important;transition:none!important}}
+
+#v112-exit-fullscreen{display:none;position:absolute;right:10px;top:62px;z-index:24;min-height:35px;padding:6px 12px;background:#342c43;color:#fff;border:1px solid #5d516f;border-radius:12px;font-size:12px;font-weight:680;box-shadow:0 6px 15px #342c4340}
+.v112-fullscreen #v112-exit-fullscreen{display:block}
+@media(max-width:740px){.v112-fullscreen #v112-exit-fullscreen{top:62px;right:8px}#editor-fullscreen span{display:none}#editor-fullscreen{min-width:33px;width:33px;padding:3px 4px;font-size:18px}}
+.v112-fullscreen #scene-expand{display:none!important}
+.v112-fullscreen .viewport-shell .stage-inset-top{display:none}

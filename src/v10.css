@@ -1,0 +1,27 @@
+/* RealLoad 1.0: calmer, more readable shipping workstation */
+:root { --studio-ink:#202821; --studio-accent:#1b6d55; --studio-soft:#edf4ef; }
+.topbar {box-shadow:0 1px 0 rgba(25,47,34,.06);background:rgba(252,253,251,.94);backdrop-filter:blur(14px)}
+.brand-symbol {border-radius:13px}
+.workspace {background:linear-gradient(180deg,#f8faf8 0,#f2f5f2 100%)}
+.workspace-heading-group h1 {letter-spacing:-.045em}
+.viewport-shell {border-radius:19px;overflow:hidden;border:1px solid rgba(47,65,47,.09);box-shadow:0 14px 38px rgba(38,54,45,.07)}
+.viewport-toolbar{background:rgba(255,255,255,.95)}
+.stage{background:radial-gradient(ellipse at 50% 44%,#fff 5%,#f0f4f4 100%)}
+.rail-item{transition:background .16s ease,color .16s ease}
+.sku-card,.free-material{transition:border-color .16s ease,background .16s ease,transform .16s ease,box-shadow .16s ease}
+.sku-card:hover,.free-material:hover{transform:translateY(-1px)}
+.free-arrangement{margin:18px 0;padding:16px;border:1px solid #dce5dc;border-radius:15px;background:linear-gradient(155deg,#f9fbf8,#f1f5f1)}
+.free-arrangement>strong{display:block;color:#24352b;font-size:13px;letter-spacing:-.01em}
+.free-arrangement>span{display:block;color:#728078;font-size:11px;line-height:1.55;margin-top:4px}
+.free-arrangement-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
+.free-arrangement-grid button{border:1px solid #d4ded5;background:white;border-radius:10px;padding:10px 5px;color:#254132;font-size:12px;font-weight:600;cursor:pointer;min-height:40px}
+.free-arrangement-grid button:hover{background:#e5f2e9;border-color:#99c6a9}
+.free-arrangement-grid button:focus-visible{outline:3px solid #80bca3;outline-offset:2px}
+.pbr-toggle{display:flex!important;flex-wrap:wrap;gap:6px}
+.pbr-toggle small{display:block;width:100%;margin-left:22px;font-size:10px;color:#76827a}
+#redo-btn{white-space:nowrap}
+button,input,select{font-family:inherit}
+button:not(:disabled):active{transform:scale(.985)}
+@media(max-width:1000px){#redo-btn{font-size:11px}}
+@media(max-width:780px){.free-arrangement{margin:15px 0}.viewport-shell{border-radius:12px}}
+@media(prefers-reduced-motion:reduce){.sku-card,.free-material,.rail-item{transition:none!important;transform:none!important}}

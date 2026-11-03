@@ -1,0 +1,239 @@
+{
+  "browser": "Chrome/Chromium headless (configured executable)",
+  "startedAt": "2026-11-03T07:49:06.093Z",
+  "origin": "http://localhost:4266",
+  "tests": [
+    {
+      "name": "WebGL2 renderer initializes with the real 53-unit sample",
+      "pass": true,
+      "detail": {
+        "label": "货柜三维视图，当前显示 53 件货物",
+        "width": 1050,
+        "height": 490,
+        "available": true,
+        "status": "WebGL2 实时渲染"
+      }
+    },
+    {
+      "name": "all five view controls produce populated canvases",
+      "pass": true,
+      "detail": [
+        {
+          "mode": "iso",
+          "canvases": [
+            {
+              "label": "货柜三维视图，当前显示 53 件货物",
+              "width": 1050,
+              "height": 490,
+              "webgl": true
+            }
+          ]
+        },
+        {
+          "mode": "top",
+          "canvases": [
+            {
+              "label": "货柜俯视视图，当前显示 53 件货物",
+              "width": 1050,
+              "height": 490,
+              "webgl": true
+            }
+          ]
+        },
+        {
+          "mode": "door",
+          "canvases": [
+            {
+              "label": "货柜柜门视图，当前显示 53 件货物",
+              "width": 1050,
+              "height": 490,
+              "webgl": true
+            }
+          ]
+        },
+        {
+          "mode": "side",
+          "canvases": [
+            {
+              "label": "货柜侧面视图，当前显示 53 件货物",
+              "width": 1050,
+              "height": 490,
+              "webgl": true
+            }
+          ]
+        },
+        {
+          "mode": "multi",
+          "canvases": [
+            {
+              "label": "货柜三维视图，当前显示 53 件货物",
+              "width": 525,
+              "height": 244,
+              "webgl": true
+            },
+            {
+              "label": "货柜俯视视图，当前显示 53 件货物",
+              "width": 525,
+              "height": 244,
+              "webgl": true
+            },
+            {
+              "label": "货柜柜门视图，当前显示 53 件货物",
+              "width": 525,
+              "height": 244,
+              "webgl": true
+            },
+            {
+              "label": "货柜侧面视图，当前显示 53 件货物",
+              "width": 525,
+              "height": 244,
+              "webgl": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "transparent, solid and hidden shell controls change the actual scene",
+      "pass": true,
+      "detail": [
+        {
+          "mode": "ghost",
+          "hash": "bd8f89f90db6d7fc02c68d5fda928857ed99c4be7da1509e7b081098f2698216",
+          "opacity": "35%"
+        },
+        {
+          "mode": "solid",
+          "hash": "2a48dd4608a50bdcf88dcac4fabd2712f416ee5c7c9576d182e3c4054eef0ea6",
+          "opacity": "100%"
+        },
+        {
+          "mode": "hidden",
+          "hash": "66d70e10d01e1a76fcad7fd8bc12b7b65b6afebe601250c9710d50b9789b4b8d",
+          "opacity": "0%"
+        }
+      ]
+    },
+    {
+      "name": "focus then zoom in and out changes the rendered cargo without losing the view",
+      "pass": true,
+      "detail": {
+        "focusHash": "85d09e8499d1a0ea4445681ba4e61cc8d156946683485067990ac445abfc2fb0",
+        "zoomHash": "1d9da4cfe21fe4893c699e818a36fa2d9ee3d605f9ffaddd7542d1e6039b4051",
+        "restoredHash": "26daa449289ee594f0115e3d73d6c5e569a7d2bf562bf45ce1f1a9a3731a081e"
+      }
+    },
+    {
+      "name": "real WebGL context loss switches to Canvas, restores WebGL and keeps selection interactive",
+      "pass": true,
+      "detail": {
+        "lost": {
+          "fallback": true,
+          "canvas2d": true,
+          "hits": 6,
+          "labels": 9,
+          "tapSelections": 1
+        },
+        "restored": {
+          "webgl": true,
+          "fallback": false,
+          "children": 1,
+          "labels": 12
+        },
+        "draws": 1
+      }
+    },
+    {
+      "name": "desktop ordinary wheel preserves the camera while modifier wheel zooms",
+      "pass": true,
+      "detail": {
+        "before": 0,
+        "after": 0,
+        "zoomBeforeY": 0,
+        "zoomAfterY": 0,
+        "ordinaryBefore": "40b26fedfce7b07a9b22c7460866e4b6f78550175855c1905004d8802da55823",
+        "ordinaryAfter": "40b26fedfce7b07a9b22c7460866e4b6f78550175855c1905004d8802da55823",
+        "cameraBefore": {
+          "zoom": 1,
+          "yaw": 0.75,
+          "pitch": 0.45,
+          "focusTarget": null,
+          "vp": [
+            1.1329345703125,
+            -0.7157886624336243,
+            -0.6137927174568176,
+            -0.6137796640396118,
+            0,
+            2.1738717555999756,
+            -0.4349747598171234,
+            -0.4349655210971832,
+            -1.0554379224777222,
+            -0.7683463096618652,
+            -0.6588611006736755,
+            -0.6588470935821533,
+            -2.843034267425537,
+            0.8807820677757263,
+            13.249979019165039,
+            13.259697914123535
+          ],
+          "width": 764,
+          "height": 490,
+          "rect": {
+            "x": 371,
+            "y": 164,
+            "width": 764,
+            "height": 489.5625
+          },
+          "workspaceScroll": 0
+        },
+        "cameraAfter": {
+          "zoom": 1,
+          "yaw": 0.75,
+          "pitch": 0.45,
+          "focusTarget": null,
+          "vp": [
+            1.1329345703125,
+            -0.7157886624336243,
+            -0.6137927174568176,
+            -0.6137796640396118,
+            0,
+            2.1738717555999756,
+            -0.4349747598171234,
+            -0.4349655210971832,
+            -1.0554379224777222,
+            -0.7683463096618652,
+            -0.6588611006736755,
+            -0.6588470935821533,
+            -2.843034267425537,
+            0.8807820677757263,
+            13.249979019165039,
+            13.259697914123535
+          ],
+          "width": 764,
+          "height": 490,
+          "rect": {
+            "x": 371,
+            "y": 164,
+            "width": 764,
+            "height": 489.5625
+          },
+          "workspaceScroll": 0
+        },
+        "zoomAfterModifier": 1.15,
+        "modifierZoomChanged": true
+      }
+    },
+    {
+      "name": "application did not emit an uncaught browser error",
+      "pass": true,
+      "detail": {
+        "warnings": []
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "finishedAt": "2026-11-03T07:49:11.784Z",
+  "passed": 7,
+  "failed": 0
+}

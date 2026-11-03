@@ -1,0 +1,17 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {groupNames,loadedGroupIds,assignSkuGroup,renameGroup} from '../src/group-actions.mjs';
+import {groupKey,unitNumber,makeNumbering} from '../src/manifest.mjs';
+const sku=(id,groupId,code=null)=>({id,skuCode:id,groupId,orderNo:`PO-${id}`,name:`Box ${id}`,kind:'carton',L:500,W:400,H:300,weight:12,qty:2,stackLimit:3,numbering:makeNumbering({external:code,quantity:2,group:groupId,code:id,kind:'carton'})});
+const source=[sku('A','组A','CT-101~CT-102'),sku('B','组B'),sku('C','组A')];
+const placements=[{id:'A#1',skuId:'A'},{id:'B#1',skuId:'B'},{id:'C#1',skuId:'C'},{id:'B#2',skuId:'B'}];
+test('group names are real SKU groups, not cosmetic filters',()=>assert.deepEqual(groupNames(source),['组A','组B']));
+test('loaded group selection uses shipment SKU relation',()=>assert.deepEqual(loadedGroupIds(placements,source,'组A'),['A#1','C#1']));
+test('assigning SKU changes only chosen items and preserves physical labels',()=>{const result=assignSkuGroup(source,['A','B'],'新客户组');assert.equal(result.ok,true);assert.equal(groupKey(result.skus[0]),'新客户组');assert.equal(unitNumber(result.skus[0],1),'CT-101');assert.equal(groupKey(result.skus[2]),'组A');assert.equal(source[1].groupId,'组B');assert.equal(result.skus[0].weight,12);});
+test('planning labels regenerated from new group, source-provided untouched',()=>{const result=assignSkuGroup(source,['B'],'新客户组');assert.match(unitNumber(result.skus[1],1),/新客户组/);assert.equal(result.skus[1].numbering.source,'system-planned');assert.equal(source[1].groupId,'组B');});
+test('rename group changes every matching SKU and retains original order number',()=>{const result=renameGroup(source,'组A','中国区');assert.equal(result.ok,true);assert.equal(result.skus[0].orderNo,'PO-A');assert.equal(result.skus[2].groupId,'中国区');assert.equal(result.skus[1].groupId,'组B');});
+test('group changes reject invalid selection and empty names',()=>{assert.equal(assignSkuGroup(source,['missing'],'A').ok,false);assert.equal(assignSkuGroup(source,['A'],'  ').ok,false);assert.equal(renameGroup(source,'notfound','A').ok,false);});
+test('distinct free-place and edit-loaded panes, item menu and group manager are real controls',()=>{const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');for(const id of ['free-mode-select','free-loaded-area','free-loaded-search','free-loaded-list','free-group-filter','free-group-select','open-group-manager','group-dialog','group-active','group-assign','group-rename','group-select-loaded','cargo-context-menu','shortcuts-dialog','shortcut-open'])assert.ok(html.includes(`id="${id}"`),id);});
+test('viewport right-click dispatches actual hit item',()=>{const src=readFileSync(new URL('../src/webgl.mjs',import.meta.url),'utf8');assert.match(src,/addEventListener\('contextmenu'/);assert.match(src,/handlers\.contextMenu\(item\.id/);});
+test('keyboard editor, group, lock, rotate, selection, escape and context support wired',()=>{const src=readFileSync(new URL('../src/app.mjs',import.meta.url),'utf8');for(const token of ["key==='e'","key==='p'","key==='g'","key==='k'","key==='f10'","key==='escape'","pageup:['z',1]","key==='r'","key==='a'"])assert.ok(src.includes(token),token);assert.match(src,/function setFreeEditor/);assert.match(src,/function runCargoCommand/);});

@@ -1,0 +1,155 @@
+[
+  {
+    "name": "first-use-tutorial-and-plan-name",
+    "viewport": {
+      "width": 876,
+      "height": 672
+    },
+    "passed": true,
+    "final": {
+      "selected": null,
+      "count": 0,
+      "preview": "idle"
+    }
+  },
+  {
+    "name": "scene-fullscreen-retains-floating-editing-and-cargo-access",
+    "viewport": {
+      "width": 876,
+      "height": 672
+    },
+    "passed": true,
+    "final": {
+      "scenario": "irregular-equipment",
+      "selected": "SIM-IRR-L#1",
+      "count": 7,
+      "preview": "idle"
+    }
+  },
+  {
+    "name": "scenarios-replace-and-history",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "passed": true,
+    "final": {
+      "scenario": "door-support-boundaries",
+      "selected": null,
+      "count": 6,
+      "preview": "idle"
+    }
+  },
+  {
+    "name": "all-four-samples-complete-loading-and-unloading",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "passed": true,
+    "final": {
+      "scenario": "free-placement",
+      "selected": null,
+      "count": 5,
+      "preview": "idle"
+    }
+  },
+  {
+    "name": "selected-unit-edit-and-undo",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "passed": true,
+    "final": {
+      "scenario": "daily-mixed",
+      "selected": "SIM-CARTON#1",
+      "count": 11,
+      "preview": "idle"
+    }
+  },
+  {
+    "name": "scene-picking-and-one-editor",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "passed": true,
+    "final": {
+      "scenario": "daily-mixed",
+      "selected": "SIM-CARTON#1",
+      "count": 11,
+      "preview": "idle"
+    }
+  },
+  {
+    "name": "support-rejection-and-preview-exit",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "passed": true,
+    "final": {
+      "scenario": "door-support-boundaries",
+      "selected": "SIM-SUPPORT-BASE#1",
+      "count": 6,
+      "preview": "idle"
+    }
+  },
+  {
+    "name": "task-flow-320x568",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "passed": true,
+    "final": {
+      "scenario": "irregular-equipment",
+      "selected": null,
+      "count": 7,
+      "preview": "idle"
+    }
+  },
+  {
+    "name": "task-flow-390x600",
+    "viewport": {
+      "width": 390,
+      "height": 600
+    },
+    "passed": true,
+    "final": {
+      "scenario": "irregular-equipment",
+      "selected": null,
+      "count": 7,
+      "preview": "idle"
+    }
+  },
+  {
+    "name": "task-flow-820x500",
+    "viewport": {
+      "width": 820,
+      "height": 500
+    },
+    "passed": true,
+    "final": {
+      "scenario": "irregular-equipment",
+      "selected": null,
+      "count": 7,
+      "preview": "idle"
+    }
+  },
+  {
+    "name": "task-flow-1440x900",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "passed": true,
+    "final": {
+      "scenario": "irregular-equipment",
+      "selected": null,
+      "count": 7,
+      "preview": "idle"
+    }
+  }
+]

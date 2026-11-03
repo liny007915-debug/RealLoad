@@ -1,0 +1,88 @@
+/* RealLoad 1.8 — warm neutral / iris / terracotta, unified geometry.
+ * Apple-inspired clarity and motion principles, not a copy of Apple styles.
+ * Radius: 12px control, 18px panels, 24px dialogs, 999px capsule.
+ */
+:root{--bg:#f5f2f0;--surface:#fffdfb;--panel:#fffdfb;--stage:#f3efea;
+ --ink:#23232a;--muted:#72707c;--soft:#8e8a90;--line:#e9e4e1;
+ --accent:#5954b8;--accent-weak:#f0eeff;--dark:#272438;--focus:#7772dc;
+ --paper:#faf7f3;--paper-shade:#f3eff0;--subtle-border:#e7e0e4;
+ --shadow:0 30px 85px rgba(41,35,53,.12);--button-shadow:0 12px 30px rgba(54,43,65,.07);
+ --r-control:12px;--r-panel:18px;--r-dialog:24px}
+body,#app,.layout{color:var(--ink);background:var(--bg)}
+.topbar{background:linear-gradient(106deg,#fffdfb 2%,#fcf8f4 43%,#f4f0fb 100%);border-color:#eae2e2;box-shadow:0 2px 18px rgba(62,50,63,.025)}
+.brand-symbol{border-radius:12px;background:linear-gradient(145deg,#756bd0 0%,#544b9a 70%,#343153 100%);box-shadow:0 6px 16px #655bb02b}
+.brand-text strong{color:#262337}.brand-text span{color:#89818b}
+.project-title{border:1px solid #ebe4e5!important;background:rgba(255,255,255,.68)!important;border-radius:var(--r-control)!important;color:#3a3441}
+.top-actions #import-btn,.top-actions #pack-btn,.global-overflow summary{border-radius:var(--r-control)!important}
+.top-actions #pack-btn,.v17-primary,.action-btn{background:linear-gradient(115deg,#6b62cb 0%,#4f459c 100%)!important;color:#fff!important;border:1px solid rgba(82,74,145,.23)!important;box-shadow:0 7px 17px rgba(88,77,164,.20)!important}
+.top-actions #pack-btn:hover,.v17-primary:hover,.action-btn:hover{filter:brightness(1.07)}
+.global-overflow-panel{border-radius:var(--r-panel);border-color:var(--line);box-shadow:var(--shadow)}
+.rail{background:#fffcfa;border-color:var(--line)}
+.rail-item,.rail .rail-item{border-radius:var(--r-control);color:#676370}
+.rail-item.active,.rail-item:hover,.rail-item.active:hover{background:#f0eeff;color:#4a429b}
+.library{background:#fffdfb;border-right:1px solid var(--line)}.library-top .section-kicker{color:#a09aa1}
+.workspace{background:linear-gradient(148deg,#f9f5f3 1%,#f4f0f6 40%,#f5f0ec 95%)}
+.workspace-stats{border-color:#eee7e8;border-radius:var(--r-panel);box-shadow:0 6px 24px rgba(85,70,79,.05)}
+.quickstart-strip{border-radius:var(--r-control);background:linear-gradient(115deg,#fffdfa 5%,#faf7ff 85%);border-color:#eee8ee}
+.quickstart-strip button{color:#58518f!important}
+.viewport-shell{border-radius:var(--r-panel);background:var(--surface);border:1px solid #e8e1e4;box-shadow:0 23px 65px rgba(54,41,67,.09)}
+.viewport-toolbar{background:rgba(255,254,252,.96);border-color:var(--line)}
+.viewport-tabs{background:#f2eff2;border-radius:var(--r-control)}
+.viewport-tabs button,.viewport-controls .view-tool{border-radius:9px!important}
+.viewport-tabs button.active{background:#fff;box-shadow:0 2px 12px rgba(62,47,82,.11);color:#5148a6}
+.viewport-controls .view-tool{color:#5c5864}.viewport-controls .view-tool:hover{background:#f2effe;color:#5548ad}
+.stage,.stage-canvases{background:linear-gradient(145deg,#faf7f2 0%,#eae3e0 100%)!important}
+.scene-preset-bar{border:1px solid rgba(225,215,229,.85);background:rgba(255,253,251,.91);border-radius:var(--r-control);box-shadow:0 10px 30px rgba(45,36,55,.10)}
+.preset-btn{border-radius:9px}.scene-preset-bar .preset-btn.active{background:linear-gradient(120deg,#6459c0,#494183);color:white}
+#renderer-status{background:#fffaf7eb;border-color:#e8e2e6;color:#777078}
+.scene-expand,.scene-quick,.scene-readout,.selection-actions{border-radius:var(--r-control)!important;border-color:#e9e1e4!important;background:rgba(255,253,250,.94)!important;box-shadow:0 11px 28px rgba(48,38,54,.10)!important}
+.scene-round,.scene-expand{border-radius:9px!important}.scene-round:hover,.selection-actions button:hover{background:#ecebfe!important;color:#5145a5!important}
+.scene-readout strong{color:#41388b}.scene-readout small{color:#857d83}
+.locator-panel,.display-pop,.inspector,.sku-card,.free-material,.container-option,.free-docking,.free-arrangement,.free-loaded-list,.group-row-actions{border-radius:var(--r-control)!important;border-color:var(--line)}
+.sku-card.selected,.loaded-unit.active{background:#f0edff!important;box-shadow:inset 3px 0 #695fc6!important}
+.free-segment{background:#f1eef6;border:1px solid #e8e1ef;border-radius:var(--r-control)}
+.free-segment button{border-radius:9px!important}.free-segment button.active{background:white;color:#4c419a}
+.free-loaded-search,.search-control,.locator-search{background:#faf8fb;border:1px solid #ede7ec;border-radius:var(--r-control)}
+.group-row-button,.group-row-actions button,.text-tool{color:#554cb0!important;border-radius:9px}
+.free-group-tools button{background:#f0eeff;color:#5146a3;border-color:#e8e2f4}
+.free-action-bar button,.free-dock-grid button,.free-arrow-grid button,.free-arrangement-grid button,.edit-buttons button,.scene-quick button{border-radius:var(--r-control)!important}
+.free-action-bar button:hover,.free-dock-grid button:hover,.free-arrow-grid button:hover{border-color:#b6aef1;background:#f0eeff}
+.cargo-context-menu,.global-overflow-panel{border-radius:var(--r-panel);border-color:#e8e1ec;background:rgba(255,253,253,.97)}
+.cargo-context-menu button{border-radius:10px}.cargo-context-menu button:hover,.cargo-context-menu button:focus-visible{background:#efedff;color:#554bb0}
+.v17-dialog,.editor-dialog,.import-dialog{border-radius:var(--r-dialog)!important;border-color:#e5dfe7;box-shadow:0 35px 90px #26223a38}
+.v17-dialog::backdrop{background:#28223856}.v17-dismiss{border-radius:10px;background:#f4f0f5;color:#716a76}
+.v17-label input,.v17-label select,.v17-dialog-toolbar button,.v17-group-sku-items,.v17-sku-check{border-radius:var(--r-control)}
+.v17-dialog-toolbar button{background:#f1effc;color:#51479f;border-color:#e7e2f1}.v17-sku-check:hover{background:#f4f1fb}
+.v17-key-help kbd{background:#f2eff8;color:#574ca8;border-color:#e3ddf2;border-radius:8px}
+.cargo-label.selected,.gizmo-handle{border-color:#6b60c4!important}
+button{transition:background-color .16s ease,border-color .16s ease,box-shadow .16s ease,transform .16s ease}
+button:active:not(:disabled){transform:scale(.98)}
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #a99cfa!important;outline-offset:2px}
+/* Spatial camera drawer: intentionally out of the way and discoverable on demand. */
+.camera-toggle{white-space:nowrap;min-width:54px}
+.camera-pad{position:absolute;z-index:15;top:62px;left:16px;width:min(305px,calc(100% - 32px));padding:16px;background:rgba(255,253,253,.975);backdrop-filter:blur(22px);border:1px solid #e5dce9;border-radius:var(--r-panel);box-shadow:0 20px 65px #31263c24;display:flex;flex-direction:column;gap:10px;animation:cam-in .2s ease}
+.camera-pad.hidden{display:none!important}
+.camera-pad-head{display:flex;justify-content:space-between;align-items:center}.camera-pad-head strong{font-size:15px;letter-spacing:-.3px;color:#353044}.camera-pad-head button{border:0;background:#f3eff4;border-radius:9px;font-size:20px;color:#6d6473;width:30px;height:30px}
+.camera-pad p{font-size:11px;line-height:1.6;color:#78717f;margin:0}
+.camera-orbit-grid{display:grid;grid-template-columns:repeat(3,42px);gap:5px;justify-content:center}
+.camera-orbit-grid button{width:42px;height:38px;border:1px solid #e6e0e9;border-radius:var(--r-control);background:linear-gradient(150deg,#fff,#f4f0fd);color:#5d529e;font-size:18px;box-shadow:0 2px 4px #423a5810;cursor:pointer}
+.camera-orbit-grid button:hover{background:#e9e4ff;border-color:#b7acee}
+.camera-actions{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px}
+.camera-actions button{min-height:38px;border:1px solid #e7dfeb;border-radius:var(--r-control);background:#faf8fb;color:#554d72;font-size:11px;font-weight:660}
+.camera-actions button:last-child{background:linear-gradient(110deg,#635abc,#52479d);color:#fff;border-color:transparent}
+.camera-help{background:#f7f2f6;padding:11px;border-radius:var(--r-control);font-size:10.5px;line-height:1.7;color:#766d7e}
+@keyframes cam-in{from{transform:translateY(-7px);opacity:0}to{transform:translateY(0);opacity:1}}
+@media(max-width:900px){.viewport-controls .view-tool.camera-toggle{min-width:47px;font-size:11px}.viewport-controls #focus-selected{font-size:11px}}
+@media(max-width:650px){.topbar,.rail{background:#fffaf9}.workspace{padding:0 6px 6px}.viewport-toolbar{gap:2px}.viewport-controls{gap:0}.viewport-controls .view-tool.camera-toggle{padding:6px 3px;font-size:10px;min-width:36px}.viewport-controls #focus-selected{display:none}.camera-pad{top:51px;left:8px;width:min(288px,calc(100% - 16px));padding:13px}.scene-preset-bar{box-shadow:0 5px 18px #312c4623}}
+@media(prefers-reduced-motion:reduce){.camera-pad,button{animation:none!important;transition:none!important}}
+
+/* Final consistency pass: nested controls, empty/onboarding states and map interaction. */
+.viewport-tabs button,.scene-preset-bar .preset-btn,.free-segment button,.cargo-context-menu button,.viewport-controls .view-tool,.scene-round,.quickstart-strip button,.empty-actions button,.selection-actions button{border-radius:12px!important}
+.empty-stage{border-radius:18px!important;border-color:#ece3e8;background:linear-gradient(145deg,rgba(255,253,252,.98),rgba(247,243,252,.98));box-shadow:0 22px 60px #372c4024}
+.empty-kicker{color:#776ac4}.empty-stage strong{color:#332f45}.empty-stage p{color:#77717e}
+.empty-actions button{background:#faf7fb;color:#635b75;border-color:#e7deea}
+.empty-actions button:first-child{background:linear-gradient(120deg,#6b61c9,#51479e)!important;color:#fff;border-color:transparent;box-shadow:0 6px 16px #6357b32e}
+.guide-mark{background:linear-gradient(125deg,#675cc3,#3d3966)}
+.guide-dialog{border-radius:24px;background:linear-gradient(155deg,#fffefa,#faf6fe);color:#312c3d}
+.selection-actions button{color:#554b83;background:#f2effc}
+.material-dot.round_pack{background:#b69a6e}.material-dot.irregular{background:#9e8877}

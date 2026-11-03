@@ -1,0 +1,53 @@
+{
+  "source": "RealLoad Studio 1.27 Beta1, real isolated browser capture",
+  "fixture": "examples/v127-beta-mixed-specs.json",
+  "syntheticData": true,
+  "captureFps": 25,
+  "compositionFps": 30,
+  "clips": [
+    {
+      "source": "01-fullscreen-orbit.webm",
+      "output": "orbit.mp4",
+      "startSeconds": 2.9,
+      "durationSeconds": 7.4,
+      "sourceSha256": "f838a0d6db38959631920dc70c8e391086f3100052b35b423dbf38186d96347c"
+    },
+    {
+      "source": "02-precise-cargo-edit.webm",
+      "output": "movement.mp4",
+      "startSeconds": 2.9,
+      "durationSeconds": 6.4,
+      "sourceSha256": "e739a4c1a9586f4d6e83bd36ef95556ecad213cd879e063364884b879c467066"
+    },
+    {
+      "source": "06-independent-physical-specifications.webm",
+      "output": "specifications.mp4",
+      "startSeconds": 4.6,
+      "durationSeconds": 7.7,
+      "sourceSha256": "544d35db5fc6a94ad861752212af64676a1c6f625f26cb107c581aaac4757daa"
+    },
+    {
+      "source": "03-shell-opacity-and-doors.webm",
+      "output": "shell.mp4",
+      "startSeconds": 3,
+      "durationSeconds": 8.8,
+      "sourceSha256": "2ecf975cd0f36312a0b0fce4e3afc441c5ed2095a1a9b8bc7675d86f7cb4d220"
+    },
+    {
+      "source": "04-shared-coordinate-four-views.webm",
+      "output": "views.mp4",
+      "startSeconds": 2.45,
+      "durationSeconds": 9.8,
+      "sourceSha256": "f9ae28d2fca9943bf27dda95c2bb7b274afd3357c3427639c92812c2a20963e1"
+    },
+    {
+      "source": "05-ordered-load-and-unload.webm",
+      "output": "unloading.mp4",
+      "startSeconds": 15.7,
+      "durationSeconds": 11,
+      "sourceSha256": "a492f64ee20b0bcafe17f3357de0b99f5e0484e8862f943b5b9958e9ad99b665"
+    }
+  ],
+  "audio": "Original procedural score, no third-party samples",
+  "retimedClips": true
+}

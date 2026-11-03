@@ -1,0 +1,873 @@
+[
+  {
+    "name": "collapse-1280x720",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "evidence": {
+      "layouts": [
+        {
+          "stage": {
+            "x": 91,
+            "y": 174,
+            "width": 1170,
+            "height": 299.5625,
+            "top": 174,
+            "right": 1261,
+            "bottom": 473.5625,
+            "left": 91
+          },
+          "workspace": {
+            "x": 72,
+            "y": 60,
+            "width": 1208,
+            "height": 660,
+            "top": 60,
+            "right": 1280,
+            "bottom": 720,
+            "left": 72
+          },
+          "rows": "660px",
+          "canvas": "货柜三维视图，当前显示 53 件货物",
+          "hit": true,
+          "overflow": 0
+        },
+        {
+          "stage": {
+            "x": 91,
+            "y": 174,
+            "width": 1170,
+            "height": 299.5625,
+            "top": 174,
+            "right": 1261,
+            "bottom": 473.5625,
+            "left": 91
+          },
+          "workspace": {
+            "x": 72,
+            "y": 60,
+            "width": 1208,
+            "height": 660,
+            "top": 60,
+            "right": 1280,
+            "bottom": 720,
+            "left": 72
+          },
+          "rows": "660px",
+          "canvas": "货柜三维视图，当前显示 53 件货物",
+          "hit": true,
+          "overflow": 0
+        },
+        {
+          "stage": {
+            "x": 91,
+            "y": 174,
+            "width": 1170,
+            "height": 299.5625,
+            "top": 174,
+            "right": 1261,
+            "bottom": 473.5625,
+            "left": 91
+          },
+          "workspace": {
+            "x": 72,
+            "y": 60,
+            "width": 1208,
+            "height": 660,
+            "top": 60,
+            "right": 1280,
+            "bottom": 720,
+            "left": 72
+          },
+          "rows": "660px",
+          "canvas": "货柜三维视图，当前显示 53 件货物",
+          "hit": true,
+          "overflow": 0
+        }
+      ],
+      "reloaded": {
+        "stage": {
+          "x": 91,
+          "y": 174,
+          "width": 1170,
+          "height": 299.5625,
+          "top": 174,
+          "right": 1261,
+          "bottom": 473.5625,
+          "left": 91
+        },
+        "workspace": {
+          "x": 72,
+          "y": 60,
+          "width": 1208,
+          "height": 660,
+          "top": 60,
+          "right": 1280,
+          "bottom": 720,
+          "left": 72
+        },
+        "rows": "660px",
+        "canvas": "货柜三维视图，当前显示 53 件货物",
+        "hit": true,
+        "overflow": 0
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "collapse-1440x520",
+    "viewport": {
+      "width": 1440,
+      "height": 520
+    },
+    "evidence": {
+      "layouts": [
+        {
+          "stage": {
+            "x": 91,
+            "y": 141,
+            "width": 1330,
+            "height": 200,
+            "top": 141,
+            "right": 1421,
+            "bottom": 341,
+            "left": 91
+          },
+          "workspace": {
+            "x": 72,
+            "y": 48,
+            "width": 1368,
+            "height": 472,
+            "top": 48,
+            "right": 1440,
+            "bottom": 520,
+            "left": 72
+          },
+          "rows": "472px",
+          "canvas": "货柜三维视图，当前显示 53 件货物",
+          "hit": true,
+          "overflow": 0
+        },
+        {
+          "stage": {
+            "x": 91,
+            "y": 141,
+            "width": 1330,
+            "height": 200,
+            "top": 141,
+            "right": 1421,
+            "bottom": 341,
+            "left": 91
+          },
+          "workspace": {
+            "x": 72,
+            "y": 48,
+            "width": 1368,
+            "height": 472,
+            "top": 48,
+            "right": 1440,
+            "bottom": 520,
+            "left": 72
+          },
+          "rows": "472px",
+          "canvas": "货柜三维视图，当前显示 53 件货物",
+          "hit": true,
+          "overflow": 0
+        },
+        {
+          "stage": {
+            "x": 91,
+            "y": 141,
+            "width": 1330,
+            "height": 200,
+            "top": 141,
+            "right": 1421,
+            "bottom": 341,
+            "left": 91
+          },
+          "workspace": {
+            "x": 72,
+            "y": 48,
+            "width": 1368,
+            "height": 472,
+            "top": 48,
+            "right": 1440,
+            "bottom": 520,
+            "left": 72
+          },
+          "rows": "472px",
+          "canvas": "货柜三维视图，当前显示 53 件货物",
+          "hit": true,
+          "overflow": 0
+        }
+      ],
+      "reloaded": {
+        "stage": {
+          "x": 91,
+          "y": 141,
+          "width": 1330,
+          "height": 200,
+          "top": 141,
+          "right": 1421,
+          "bottom": 341,
+          "left": 91
+        },
+        "workspace": {
+          "x": 72,
+          "y": 48,
+          "width": 1368,
+          "height": 472,
+          "top": 48,
+          "right": 1440,
+          "bottom": 520,
+          "left": 72
+        },
+        "rows": "472px",
+        "canvas": "货柜三维视图，当前显示 53 件货物",
+        "hit": true,
+        "overflow": 0
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "collapse-1440x900",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "layouts": [
+        {
+          "stage": {
+            "x": 91,
+            "y": 164,
+            "width": 1330,
+            "height": 489.5625,
+            "top": 164,
+            "right": 1421,
+            "bottom": 653.5625,
+            "left": 91
+          },
+          "workspace": {
+            "x": 72,
+            "y": 60,
+            "width": 1368,
+            "height": 840,
+            "top": 60,
+            "right": 1440,
+            "bottom": 900,
+            "left": 72
+          },
+          "rows": "840px",
+          "canvas": "货柜三维视图，当前显示 53 件货物",
+          "hit": true,
+          "overflow": 0
+        },
+        {
+          "stage": {
+            "x": 91,
+            "y": 164,
+            "width": 1330,
+            "height": 489.5625,
+            "top": 164,
+            "right": 1421,
+            "bottom": 653.5625,
+            "left": 91
+          },
+          "workspace": {
+            "x": 72,
+            "y": 60,
+            "width": 1368,
+            "height": 840,
+            "top": 60,
+            "right": 1440,
+            "bottom": 900,
+            "left": 72
+          },
+          "rows": "840px",
+          "canvas": "货柜三维视图，当前显示 53 件货物",
+          "hit": true,
+          "overflow": 0
+        },
+        {
+          "stage": {
+            "x": 91,
+            "y": 164,
+            "width": 1330,
+            "height": 489.5625,
+            "top": 164,
+            "right": 1421,
+            "bottom": 653.5625,
+            "left": 91
+          },
+          "workspace": {
+            "x": 72,
+            "y": 60,
+            "width": 1368,
+            "height": 840,
+            "top": 60,
+            "right": 1440,
+            "bottom": 900,
+            "left": 72
+          },
+          "rows": "840px",
+          "canvas": "货柜三维视图，当前显示 53 件货物",
+          "hit": true,
+          "overflow": 0
+        }
+      ],
+      "reloaded": {
+        "stage": {
+          "x": 91,
+          "y": 164,
+          "width": 1330,
+          "height": 489.5625,
+          "top": 164,
+          "right": 1421,
+          "bottom": 653.5625,
+          "left": 91
+        },
+        "workspace": {
+          "x": 72,
+          "y": 60,
+          "width": 1368,
+          "height": 840,
+          "top": 60,
+          "right": 1440,
+          "bottom": 900,
+          "left": 72
+        },
+        "rows": "840px",
+        "canvas": "货柜三维视图，当前显示 53 件货物",
+        "hit": true,
+        "overflow": 0
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "collapse-1920x1080",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "evidence": {
+      "layouts": [
+        {
+          "stage": {
+            "x": 91,
+            "y": 164,
+            "width": 1810,
+            "height": 669.5625,
+            "top": 164,
+            "right": 1901,
+            "bottom": 833.5625,
+            "left": 91
+          },
+          "workspace": {
+            "x": 72,
+            "y": 60,
+            "width": 1848,
+            "height": 1020,
+            "top": 60,
+            "right": 1920,
+            "bottom": 1080,
+            "left": 72
+          },
+          "rows": "1020px",
+          "canvas": "货柜三维视图，当前显示 53 件货物",
+          "hit": true,
+          "overflow": 0
+        },
+        {
+          "stage": {
+            "x": 91,
+            "y": 164,
+            "width": 1810,
+            "height": 669.5625,
+            "top": 164,
+            "right": 1901,
+            "bottom": 833.5625,
+            "left": 91
+          },
+          "workspace": {
+            "x": 72,
+            "y": 60,
+            "width": 1848,
+            "height": 1020,
+            "top": 60,
+            "right": 1920,
+            "bottom": 1080,
+            "left": 72
+          },
+          "rows": "1020px",
+          "canvas": "货柜三维视图，当前显示 53 件货物",
+          "hit": true,
+          "overflow": 0
+        },
+        {
+          "stage": {
+            "x": 91,
+            "y": 164,
+            "width": 1810,
+            "height": 669.5625,
+            "top": 164,
+            "right": 1901,
+            "bottom": 833.5625,
+            "left": 91
+          },
+          "workspace": {
+            "x": 72,
+            "y": 60,
+            "width": 1848,
+            "height": 1020,
+            "top": 60,
+            "right": 1920,
+            "bottom": 1080,
+            "left": 72
+          },
+          "rows": "1020px",
+          "canvas": "货柜三维视图，当前显示 53 件货物",
+          "hit": true,
+          "overflow": 0
+        }
+      ],
+      "reloaded": {
+        "stage": {
+          "x": 91,
+          "y": 164,
+          "width": 1810,
+          "height": 669.5625,
+          "top": 164,
+          "right": 1901,
+          "bottom": 833.5625,
+          "left": 91
+        },
+        "workspace": {
+          "x": 72,
+          "y": 60,
+          "width": 1848,
+          "height": 1020,
+          "top": 60,
+          "right": 1920,
+          "bottom": 1080,
+          "left": 72
+        },
+        "rows": "1020px",
+        "canvas": "货柜三维视图，当前显示 53 件货物",
+        "hit": true,
+        "overflow": 0
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "resize-and-modules-retain-scene",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": [
+      {
+        "width": 876,
+        "height": 672,
+        "stage": {
+          "x": 19,
+          "y": 218,
+          "width": 838,
+          "height": 207.5625,
+          "top": 218,
+          "right": 857,
+          "bottom": 425.5625,
+          "left": 19
+        },
+        "workspace": {
+          "x": 0,
+          "y": 104,
+          "width": 876,
+          "height": 568,
+          "top": 104,
+          "right": 876,
+          "bottom": 672,
+          "left": 0
+        },
+        "rows": "44px 568px",
+        "canvas": "货柜三维视图，当前显示 53 件货物",
+        "hit": true,
+        "overflow": 0
+      },
+      {
+        "width": 390,
+        "height": 700,
+        "stage": {
+          "x": 11,
+          "y": 271,
+          "width": 368,
+          "height": 322,
+          "top": 271,
+          "right": 379,
+          "bottom": 593,
+          "left": 11
+        },
+        "workspace": {
+          "x": 0,
+          "y": 102,
+          "width": 390,
+          "height": 809.75,
+          "top": 102,
+          "right": 390,
+          "bottom": 911.75,
+          "left": 0
+        },
+        "rows": "none",
+        "canvas": "货柜三维视图，当前显示 53 件货物",
+        "hit": true,
+        "overflow": 0
+      },
+      {
+        "width": 1040,
+        "height": 700,
+        "stage": {
+          "x": 19,
+          "y": 218,
+          "width": 1002,
+          "height": 235.5625,
+          "top": 218,
+          "right": 1021,
+          "bottom": 453.5625,
+          "left": 19
+        },
+        "workspace": {
+          "x": 0,
+          "y": 104,
+          "width": 1040,
+          "height": 596,
+          "top": 104,
+          "right": 1040,
+          "bottom": 700,
+          "left": 0
+        },
+        "rows": "44px 596px",
+        "canvas": "货柜三维视图，当前显示 53 件货物",
+        "hit": true,
+        "overflow": 0
+      },
+      {
+        "width": 1041,
+        "height": 700,
+        "stage": {
+          "x": 91,
+          "y": 174,
+          "width": 931,
+          "height": 279.5625,
+          "top": 174,
+          "right": 1022,
+          "bottom": 453.5625,
+          "left": 91
+        },
+        "workspace": {
+          "x": 72,
+          "y": 60,
+          "width": 969,
+          "height": 640,
+          "top": 60,
+          "right": 1041,
+          "bottom": 700,
+          "left": 72
+        },
+        "rows": "640px",
+        "canvas": "货柜三维视图，当前显示 53 件货物",
+        "hit": true,
+        "overflow": 0
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "stage": {
+          "x": 91,
+          "y": 164,
+          "width": 1330,
+          "height": 489.5625,
+          "top": 164,
+          "right": 1421,
+          "bottom": 653.5625,
+          "left": 91
+        },
+        "workspace": {
+          "x": 72,
+          "y": 60,
+          "width": 1368,
+          "height": 840,
+          "top": 60,
+          "right": 1440,
+          "bottom": 900,
+          "left": 72
+        },
+        "rows": "840px",
+        "canvas": "货柜三维视图，当前显示 53 件货物",
+        "hit": true,
+        "overflow": 0
+      }
+    ],
+    "passed": true
+  },
+  {
+    "name": "selected-four-views-and-fullscreen-collapse",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "x": 0,
+      "y": 0,
+      "width": 1440,
+      "height": 900
+    },
+    "passed": true
+  },
+  {
+    "name": "edit-default-53-weight-quantity-metadata-and-reload",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "count": 53,
+      "weight": "3,377.00 kg",
+      "futureWeight": 17
+    },
+    "passed": true
+  },
+  {
+    "name": "valid-size-and-packaging-edits-retain-all-items",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "oldUnit": {
+        "id": "SIM-FREE-IR#1",
+        "skuId": "SIM-FREE-IR",
+        "name": "异形设备（模拟外包络与毛重）",
+        "kind": "irregular",
+        "L": 800,
+        "W": 700,
+        "H": 700,
+        "weight": 145,
+        "stackLimit": 1,
+        "locked": false,
+        "heading": 0,
+        "x": 3000,
+        "y": 500,
+        "z": 0,
+        "stackDepth": 1,
+        "groupId": "自由摆放练习",
+        "orderNo": "",
+        "batchNo": "",
+        "skuCode": "SIM-FREE-IR",
+        "unitCode": "PLAN-自由摆放练习-SIM-FREE-IR-MC-001",
+        "unitCodeSource": "system-planned",
+        "palletNo": "",
+        "destination": "",
+        "priority": "normal",
+        "cargoSpec": {
+          "version": 1,
+          "L": 800,
+          "W": 700,
+          "H": 700,
+          "weight": 145,
+          "kind": "irregular",
+          "rotate": true,
+          "allowTilt": false,
+          "stackLimit": 1
+        },
+        "ordinal": 1
+      },
+      "newUnit": {
+        "id": "SIM-FREE-IR#2",
+        "ordinal": 2,
+        "skuId": "SIM-FREE-IR",
+        "name": "更新外廓的机械设备",
+        "kind": "machine",
+        "weight": 160,
+        "stackLimit": 1,
+        "cargoSpec": {
+          "version": 1,
+          "L": 900,
+          "W": 750,
+          "H": 650,
+          "weight": 160,
+          "kind": "machine",
+          "rotate": true,
+          "allowTilt": false,
+          "stackLimit": 1
+        },
+        "locked": false,
+        "x": 500,
+        "y": 900,
+        "z": 0,
+        "L": 900,
+        "W": 750,
+        "H": 650,
+        "rotation": 0,
+        "heading": 0,
+        "stackDepth": 1,
+        "groupId": "自由摆放练习",
+        "orderNo": "",
+        "batchNo": "",
+        "skuCode": "SIM-FREE-IR",
+        "unitCode": "PLAN-自由摆放练习-SIM-FREE-IR-MC-002",
+        "unitCodeSource": "system-planned",
+        "palletNo": "",
+        "destination": "",
+        "priority": "normal"
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "conflicting-edits-keep-plan-and-form-input",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": [
+      "修改尚未应用，所有货物与位置已保留。SIM-FREE-A 已装第 3 件，数量不能小于该件序号。请先单独移出这件货物。请核对数量和货物资料后重试。",
+      "修改尚未应用，所有货物与位置已保留。SIM-FREE-A 已装第 4 件，数量不能小于该件序号。请先单独移出这件货物。请核对数量和货物资料后重试。",
+      "修改尚未应用，所有货物与位置已保留。SIM-FREE-IR 已装第 1 件，数量不能小于该件序号。请先单独移出这件货物。请核对数量和货物资料后重试。"
+    ],
+    "passed": true
+  },
+  {
+    "name": "rename-sku-preserves-unit-ids-and-selection",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": [
+      [
+        "SIM-FREE-A#1",
+        "SIM-RENAMED",
+        1
+      ],
+      [
+        "SIM-FREE-A#2",
+        "SIM-RENAMED",
+        2
+      ],
+      [
+        "SIM-FREE-A#3",
+        "SIM-RENAMED",
+        3
+      ],
+      [
+        "SIM-FREE-A#4",
+        "SIM-RENAMED",
+        4
+      ],
+      [
+        "SIM-FREE-IR#1",
+        "SIM-FREE-IR",
+        1
+      ]
+    ],
+    "passed": true
+  },
+  {
+    "name": "spreadsheet-update-and-append-preserve-existing",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "units": 5,
+      "skus": 3
+    },
+    "passed": true
+  },
+  {
+    "name": "spreadsheet-conflict-is-atomic-and-retryable",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "retained": 5
+    },
+    "passed": true
+  },
+  {
+    "name": "json-data-only-or-empty-coordinates-never-clears",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "retainedWhileLoaded": 5,
+      "unloadedInventory": 2,
+      "containerL": 6400
+    },
+    "passed": true
+  },
+  {
+    "name": "clear-is-explicit-cancellable-and-undoable",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "restored": 5
+    },
+    "passed": true
+  },
+  {
+    "name": "free-draft-retained-through-data-update-and-clear-undo",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "SIM-FREE-A#4": {
+        "z": 250
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "container-and-planning-settings-never-remove-cargo",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "retained": 5
+    },
+    "passed": true
+  },
+  {
+    "name": "small-screen-update-and-clear-876",
+    "viewport": {
+      "width": 876,
+      "height": 672
+    },
+    "evidence": {
+      "retained": 5,
+      "overflow": 0
+    },
+    "passed": true
+  },
+  {
+    "name": "small-screen-update-and-clear-390",
+    "viewport": {
+      "width": 390,
+      "height": 700
+    },
+    "evidence": {
+      "retained": 5,
+      "overflow": 0
+    },
+    "passed": true
+  }
+]

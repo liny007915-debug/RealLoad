@@ -1,0 +1,304 @@
+[
+  {
+    "name": "direct-html-shows-launcher-instructions",
+    "viewport": {
+      "width": 876,
+      "height": 672
+    },
+    "evidence": {
+      "title": "请通过启动器打开工作台"
+    },
+    "passed": true
+  },
+  {
+    "name": "module-failure-retry-preserves-saved-plan",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "recovered": true,
+      "units": 3
+    },
+    "passed": true
+  },
+  {
+    "name": "preset-is-a-preview-until-saved",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "before": "20GP",
+      "after": "40HC"
+    },
+    "passed": true
+  },
+  {
+    "name": "door-dimensions-link-is-explicit-and-measured",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "door": 2340,
+      "linkedWidth": 2188
+    },
+    "passed": true
+  },
+  {
+    "name": "invalid-draft-pauses-preview-and-recovers",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "original": 5900
+    },
+    "passed": true
+  },
+  {
+    "name": "four-views-share-draft-and-restore-without-persisting",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "frames": {
+        "iso": {
+          "L": 6400,
+          "items": [
+            [
+              "SIM-ROUTE-REAR#1",
+              400,
+              20,
+              0
+            ],
+            [
+              "SIM-ROUTE-MIDDLE#1",
+              2300,
+              20,
+              0
+            ],
+            [
+              "SIM-ROUTE-DOOR#1",
+              4600,
+              0,
+              0
+            ]
+          ]
+        },
+        "top": {
+          "L": 6400,
+          "items": [
+            [
+              "SIM-ROUTE-REAR#1",
+              400,
+              20,
+              0
+            ],
+            [
+              "SIM-ROUTE-MIDDLE#1",
+              2300,
+              20,
+              0
+            ],
+            [
+              "SIM-ROUTE-DOOR#1",
+              4600,
+              0,
+              0
+            ]
+          ]
+        },
+        "door": {
+          "L": 6400,
+          "items": [
+            [
+              "SIM-ROUTE-REAR#1",
+              400,
+              20,
+              0
+            ],
+            [
+              "SIM-ROUTE-MIDDLE#1",
+              2300,
+              20,
+              0
+            ],
+            [
+              "SIM-ROUTE-DOOR#1",
+              4600,
+              0,
+              0
+            ]
+          ]
+        },
+        "side": {
+          "L": 6400,
+          "items": [
+            [
+              "SIM-ROUTE-REAR#1",
+              400,
+              20,
+              0
+            ],
+            [
+              "SIM-ROUTE-MIDDLE#1",
+              2300,
+              20,
+              0
+            ],
+            [
+              "SIM-ROUTE-DOOR#1",
+              4600,
+              0,
+              0
+            ]
+          ]
+        }
+      },
+      "storedLength": 5900
+    },
+    "passed": true
+  },
+  {
+    "name": "draft-protects-cargo-from-another-container-calculation",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "protected": true,
+      "restored": true
+    },
+    "passed": true
+  },
+  {
+    "name": "container-save-stays-visible-1440",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "save": {
+        "x": 88,
+        "y": 798.5,
+        "width": 221,
+        "height": 41.5
+      },
+      "scrollable": true
+    },
+    "passed": true
+  },
+  {
+    "name": "container-save-stays-visible-1280",
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    },
+    "evidence": {
+      "save": {
+        "x": 88,
+        "y": 618.5,
+        "width": 221,
+        "height": 41.5
+      },
+      "scrollable": true
+    },
+    "passed": true
+  },
+  {
+    "name": "container-save-stays-visible-876",
+    "viewport": {
+      "width": 876,
+      "height": 672
+    },
+    "evidence": {
+      "save": {
+        "x": 234,
+        "y": 510.5,
+        "width": 322,
+        "height": 41.5
+      },
+      "scrollable": true
+    },
+    "passed": true
+  },
+  {
+    "name": "container-save-stays-visible-390",
+    "viewport": {
+      "width": 390,
+      "height": 700
+    },
+    "evidence": {
+      "save": {
+        "x": 28,
+        "y": 538.5,
+        "width": 248,
+        "height": 41.5
+      },
+      "scrollable": true
+    },
+    "passed": true
+  },
+  {
+    "name": "container-save-stays-visible-320",
+    "viewport": {
+      "width": 320,
+      "height": 640
+    },
+    "evidence": {
+      "save": {
+        "x": 28,
+        "y": 478.5,
+        "width": 178,
+        "height": 41.5
+      },
+      "scrollable": true
+    },
+    "passed": true
+  },
+  {
+    "name": "warm-neutral-palette-in-scene-and-dialogs",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "body": {
+        "background": "rgb(244, 243, 239)",
+        "color": "rgb(37, 38, 35)"
+      },
+      "primary": {
+        "background": "rgb(48, 51, 46)",
+        "color": "rgb(255, 255, 255)"
+      },
+      "scene": {
+        "background": "rgb(239, 238, 235)",
+        "color": "rgb(37, 38, 35)"
+      },
+      "active": {
+        "background": "rgb(255, 255, 255)",
+        "color": "rgb(48, 51, 46)"
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "native-fullscreen-keeps-zero-inset-after-draft",
+    "viewport": {
+      "width": 876,
+      "height": 672
+    },
+    "evidence": {
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 876,
+        "height": 672
+      }
+    },
+    "passed": true
+  }
+]

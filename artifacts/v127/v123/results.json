@@ -1,0 +1,193 @@
+[
+  {
+    "name": "desktop-adjacent-tools-and-scene",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "rail": {
+        "x": 0,
+        "y": 60,
+        "width": 72,
+        "height": 840
+      },
+      "library": {
+        "x": 72,
+        "y": 60,
+        "width": 280,
+        "height": 840
+      },
+      "stage": {
+        "x": 371,
+        "y": 164,
+        "width": 1050,
+        "height": 489.5625
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "command-keyboard-search-opens-real-container-editor",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "unmodified": true
+    },
+    "passed": true
+  },
+  {
+    "name": "complete-help-search-1440",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "topics": 20,
+      "allActionsReachable": true
+    },
+    "passed": true
+  },
+  {
+    "name": "complete-help-search-390",
+    "viewport": {
+      "width": 390,
+      "height": 700
+    },
+    "evidence": {
+      "topics": 20,
+      "allActionsReachable": true
+    },
+    "passed": true
+  },
+  {
+    "name": "complete-help-search-320",
+    "viewport": {
+      "width": 320,
+      "height": 568
+    },
+    "evidence": {
+      "topics": 20,
+      "allActionsReachable": true
+    },
+    "passed": true
+  },
+  {
+    "name": "contextual-guide-opens-control-and-returns-to-the-same-topic",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "topic": "views",
+      "unmodified": true
+    },
+    "passed": true
+  },
+  {
+    "name": "route-preference-changes-real-path-and-keeps-position-data",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "lowLift": {
+        "distanceMm": 10712,
+        "liftMm": 0,
+        "lowerMm": 0,
+        "turns": 3,
+        "segments": 5,
+        "peakLiftMm": 0,
+        "clearanceSteps": 0
+      },
+      "distance": {
+        "distanceMm": 10354,
+        "liftMm": 200,
+        "lowerMm": 200,
+        "turns": 2,
+        "segments": 4,
+        "peakLiftMm": 200,
+        "clearanceSteps": 0
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "planner-validation-and-popover-fit-876",
+    "viewport": {
+      "width": 876,
+      "height": 500
+    },
+    "evidence": {
+      "saved": {
+        "policy": "low-lift",
+        "maxLift": 0
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "planner-validation-and-popover-fit-390",
+    "viewport": {
+      "width": 390,
+      "height": 700
+    },
+    "evidence": {
+      "saved": {
+        "policy": "low-lift",
+        "maxLift": 0
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "native-fullscreen-retains-computation-and-help",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "canvas": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 900
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "planning-json-export-and-import-preserve-constraints",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "exportedSettings": {
+        "doorMode": "smart",
+        "clearance": 0,
+        "policy": "low-lift",
+        "maxLift": 0
+      }
+    },
+    "passed": true
+  },
+  {
+    "name": "responsive-resize-keeps-key-metrics-visible",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "evidence": {
+      "phoneMetrics": {
+        "x": 10,
+        "y": 156,
+        "width": 370,
+        "height": 37.5
+      }
+    },
+    "passed": true
+  }
+]
